@@ -7,6 +7,14 @@ from itertools import *
 Вы можете открыть документацию и прочитать про нее, либо глянуть файл дальше)
 '''
 
+'''
+Если кратко, то:
+# Каждую букву использовать 1 раз => permutation
+# Произвольное количество раз => product
+# Обыкновенные комбинации, уникальные => combinations
+'''
+
+
 
 print('>>>>>>')
 print('ЕГЭ | combinations')
@@ -23,7 +31,7 @@ P.S. Редко используется, НО используется.
 
 print('\n >>>>>>')
 print('ЕГЭ | permutations ')
-data_2 = list(permutations('ЕГЭ', r=2))
+data_2 = list(set(permutations('ЕГЭ', r=2)))
 print(data_2)
 '''
 1) Кортежи на выходе
@@ -51,7 +59,7 @@ for x in range(10):
     for y in range(10):
         pass
         #print(x, y)
-for x, y in itertools.product(range(10), range(10)):
+for x, y in product(range(10), range(10)):
     pass
     #print(x, y)
 
@@ -63,3 +71,9 @@ b = ['a', 'b', 'c'] #P.S. лучше не называть так перемен
 for i in product(a, b):
     pass
     #print(i)
+
+#3
+
+for x in permutations('ВАРВАРА'):
+    #print(x)
+    pass # в данном случае будет повтор, в permutation, исправляется: set
