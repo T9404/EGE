@@ -1,5 +1,4 @@
 from itertools import *
-# см. '../ЕГЭ2021/itertools/learn'
 
 '''
 В данном файле рассмотрим библиотеку Itertools(необходимую для КЕГЭ)
