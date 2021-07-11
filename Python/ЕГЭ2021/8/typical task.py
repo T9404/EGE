@@ -1,4 +1,5 @@
 from itertools import *
+#Прежде чем начинать, посмотрите itertools 
 
 
 # Каждую букву использовать 1 раз => permutation
