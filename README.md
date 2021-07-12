@@ -25,3 +25,9 @@ https://www.youtube.com/c/%D0%A2%D0%B8%D0%BC%D0%BE%D1%84%D0%B5%D0%B9%D0%A5%D0%B8
 https://docs.google.com/spreadsheets/d/1uhqpABXAhwdrWSp_vsAYeON3FfhVyqFw/edit#gid=1733179265
 
 https://docs.google.com/spreadsheets/d/1GRLfARfnzKiIaNsUtf2gu1nt8rwtbWWbZvZJIdpLjIw/edit#gid=1326222484
+
+
+
+Прочитать что-нибудь интересное по ВУЗам:
+
+https://2ch.hk/un/arch/2021-06-08/res/828991.html

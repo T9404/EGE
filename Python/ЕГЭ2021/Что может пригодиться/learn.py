@@ -5,3 +5,7 @@ https://pavel-karateev.gitbook.io/intermediate-python/funkcionalnoe-programmirov
 
 #Нахождение суммы цифр числа
 summa = sum(map(int, str(input())))
+
+#Что такое длина отрезка и количество точек в нем?
+#Длина: конец-начало
+#Количество: конец-начало+1
