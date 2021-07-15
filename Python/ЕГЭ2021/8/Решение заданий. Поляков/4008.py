@@ -1,3 +1,4 @@
+from itertools import *
 print('>>>>>>>')
 # №4008 К.Ю.Поляков
 '''
