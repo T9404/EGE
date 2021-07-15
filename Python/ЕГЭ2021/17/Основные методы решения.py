@@ -16,9 +16,6 @@ print('>>>>>>')
 '''
 
 
-
-
-
 answer = [i for i in range(1512, 13202+1) if  (i % 7 == 0 and (i % 11 != 0) and \
     (i % 13 != 0) and (i % 17 != 0) and (i % 23 != 0) ) ]
 print(len(answer), max(answer))
@@ -29,7 +26,7 @@ big = 0
 for x in range(1512, 13202+1): # питоновский цикл не включает конец
     if x % 7 == 0:
         if x % 11 != 0:
-            if x % 13 != 0:
+            if x % 13 != 0: #УЖАСНЫЙ КОД
                 if x % 17 != 0:
                     if x % 23 != 0:
                         amount+=1

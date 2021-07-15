@@ -113,12 +113,3 @@ def vol(n):
         return 3.3*vol(n-2)
 print(vol(33))
 print('Oтвет: 3')
-
-
-
-
-
-
-
-
-
