@@ -18,7 +18,7 @@ def f(x):
     else:
         return 0
 for i in range(10, 9999+1):
-    if f(i) and i % 3 == 0 and i % 11 == 0 and i % 2 == 1:
+    if f(i) and i % 3 == 0 and i % 11 == 0 and i % 2 == 0:
         k+=1
         mak = max(mak, i)
 print(k, mak)
@@ -29,3 +29,12 @@ print(k, mak)
 Разделим 23 на 9 (основание в квадрате), получим 18 и 5 в остатке (5 = 12_{3}).
 https://ege-study.ru/ru/ege/materialy/informatika/zadacha-16-razbor-razlichnyx-tipov-zadach/
 '''
+
+# Способ решения номер 2
+def ok(n):
+    return (n % 2 == 0) and\
+         (bin(n)[2:].count('1') == 3)\
+         and ((n % 5 != 0) and (n % 8 == 0))
+
+a = [n for n in range(64, 1024+1) if ok(n)]
+print(len(a), max(a))
