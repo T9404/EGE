@@ -7,16 +7,38 @@ https://ege-study.ru/ru/ege/materialy/informatika/zadacha-16-razbor-razlichnyx-t
 
 '''
 
-# 3) Нахождение суммы цифр числа
-summa = sum(map(int, str(input())))
+#3) Нахождение суммы цифр числа
+#summa = sum(map(int, str(input())))
 
-
-# 4) Что такое длина отрезка и количество точек в нем?
+#4) Что такое длина отрезка и количество точек в нем?
 #Длина: конец-начало
 #Количество: конец-начало+1
 
+#5) В чем разница между ‘is’ и ‘==’ в python
 
-# 5) Find в python
+'''
+Оператор is сравнивает идентичность двух объектов,
+в то время как оператор == сравнивает значения двух объектов.
+https://programmera.ru/uroki-po-python/v-chem-raznitsa-mezhdu-is-i-v-python/
+'''
+
+list_1 = ['a', 'b', 'c']
+list_2 = list_1
+list_3 = list(list_1)
+print(list_1)
+print(list_2)
+print(list_3)
+
+print('>>>>> == ')
+print(list_1 == list_2)
+print(list_1 == list_3)
+
+print('>>>>> is ')
+print(list_1 is list_2)
+print(list_1 is list_3)
+
+# 6) Find в python
+print('>>>> find')
 dring = 'gcGC'
 print('gcGC'.find(dring)) #если строка состоит из 'gcGC' то выведет индекс найденного элемента, вывел 0
 
@@ -27,7 +49,8 @@ dr = 'gcGC dased gcGC'
 print('gcGC'.find(dr)) # вывел -1, т.к. строка состоит не только из одной комбинации gcGC
 
 
-# 6) Count в python
+# 7) Count в python
+print('>>>>>> count')
 string = '88005553535прощепозвонитьчемукого-тозанимать'
 print(string.count('0')) #вернет 2, т.к. два нуля в строке. Лучше не играть с этим в 24 задании в подстроках, т.к. теряет. он проходит через строку, а не через элемент
 print(string.count('5')) # вернет 5
