@@ -36,3 +36,24 @@ print(list_1 == list_3)
 print('>>>>> is ')
 print(list_1 is list_2)
 print(list_1 is list_3)
+
+
+
+# 6) Find в python
+print('>>>> find')
+dring = 'gcGC'
+print('gcGC'.find(dring)) #если строка состоит из 'gcGC' то выведет индекс найденного элемента, вывел 0
+
+word = 'gcGCgcGCgcGCgcGCfdsfgcGC'
+print('gcGC'.find(word)) #вывел -1, т.к. не нашел элемент 
+
+dr = 'gcGC dased gcGC'
+print('gcGC'.find(dr)) # вывел -1, т.к. строка состоит не только из одной комбинации gcGC
+
+
+# 7) Count в python
+print('>>>>>> count')
+string = '88005553535прощепозвонитьчемукого-тозанимать'
+print(string.count('0')) #вернет 2, т.к. два нуля в строке. Лучше не играть с этим в 24 задании в подстроках, т.к. теряет. он проходит через строку, а не через элемент
+print(string.count('5')) # вернет 5
+
