@@ -68,3 +68,8 @@ def f(x):
             return 'Составное'
     return 'Простое'
 print(f(1232))
+
+
+'''
+https://proproprogs.ru/python_base/sortirovka-sort-i-sorted
+'''
