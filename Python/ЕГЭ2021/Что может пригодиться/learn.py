@@ -69,7 +69,25 @@ def f(x):
     return 'Простое'
 print(f(1232))
 
+print('>>>>>>>\nСортировка')
+#8) Сортировка в питоне
 
+list_new = [ 2, 213, 41, 414, 1, 1999, 10000, 1, 2, 1]
+print(sorted(list_new, key=lambda x: x%2 ))
 '''
 https://proproprogs.ru/python_base/sortirovka-sort-i-sorted
 '''
+
+#9) Использование yield
+print('>>>>>Фибоначчи')
+def number_range(n): #алгоритм для чисел Фибоначчи
+    a, b = 1, 1
+    for i in range(n):
+        yield a
+        a, b = b, a+b
+data = list(number_range(10000))
+print(data[-1])
+'''
+https://all-python.ru/osnovy/yield.html
+'''
+
