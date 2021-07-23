@@ -96,8 +96,11 @@ sys.getrecursionlimit(глубина рекурсии)
 
 https://all-python.ru/osnovy/yield.html
 '''
-data = [20, 500, 62, 174]
+
+
+print('>>>>>>enumerate')
 #10) Питонический цикл
+data = [20, 500, 62, 174]
 for i, value in enumerate(data, 1): #индекс с 1, а не с нуля!!!
     print(i, value)
 
@@ -105,4 +108,19 @@ try:
     for i, x_value in enumerate(6, 1):
         pass 
 except:
-    print('так не работает')
+    print('\nтак не работает')
+
+print('\n>>>>>>set')
+#11 Множества
+a = set()
+a.add(12)
+a.add(1)
+print(a)
+
+a_new = {i for i in [9, 8, 9, 8, 7]}
+print(a_new) #посмотрите что вернуло
+#add, remove, pop, discard(удаление, даже если не сущ элемента)
+
+'''
+СМОТРИТЕ на вывод
+'''
