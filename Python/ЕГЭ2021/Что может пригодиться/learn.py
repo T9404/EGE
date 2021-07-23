@@ -96,4 +96,13 @@ sys.getrecursionlimit(глубина рекурсии)
 
 https://all-python.ru/osnovy/yield.html
 '''
+data = [20, 500, 62, 174]
+#10) Питонический цикл
+for i, value in enumerate(data, 1): #индекс с 1, а не с нуля!!!
+    print(i, value)
 
+try:
+    for i, x_value in enumerate(6, 1):
+        pass 
+except:
+    print('так не работает')
