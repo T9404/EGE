@@ -87,7 +87,13 @@ def number_range(n): #алгоритм для чисел Фибоначчи
         a, b = b, a+b
 data = list(number_range(10000))
 print(data[-1])
+
 '''
+P.S. рекурсивный метод в питоне может написать: maximum recursion, поэтому пользуйтесь:
+import sys
+sys.getrecursionlimit(глубина рекурсии)
+
+
 https://all-python.ru/osnovy/yield.html
 '''
 
