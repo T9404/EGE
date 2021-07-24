@@ -31,3 +31,12 @@ https://docs.google.com/spreadsheets/d/1GRLfARfnzKiIaNsUtf2gu1nt8rwtbWWbZvZJIdpL
 Прочитать что-нибудь интересное по ВУЗам:
 
 https://2ch.hk/un/arch/2021-06-08/res/828991.html
+
+
+Если вы нашли ошибку в программе или какой-нибудь недочет, напишите нам в телеграм:
+
+@drachiovaelena
+
+@IZ_PROGRAMMER
+
+@help_Tom
