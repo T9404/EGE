@@ -33,6 +33,9 @@ https://docs.google.com/spreadsheets/d/1GRLfARfnzKiIaNsUtf2gu1nt8rwtbWWbZvZJIdpL
 https://2ch.hk/un/arch/2021-06-08/res/828991.html
 
 
+
+
+P.S.
 Если вы нашли ошибку в программе или какой-нибудь недочет, напишите нам в телеграм:
 
 @drachiovaelena
