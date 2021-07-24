@@ -37,10 +37,10 @@ https://2ch.hk/un/arch/2021-06-08/res/828991.html
 
 P.S.
 
-Если вы нашли ошибку в программе или какой-нибудь недочет, напишите нам в телеграм:
+Если вы нашли ошибку в программе или какой-нибудь недочет, напишите нам в соц.сетях:
 
-@drachiovaelena
+@drachiovaelena, https://vk.com/drachiovaelena
 
-@IZ_PROGRAMMER
+@IZ_PROGRAMMER, https://vk.com/programmer7
 
 @help_Tom
