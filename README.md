@@ -39,6 +39,8 @@ P.S.
 
 Если вы нашли ошибку в программе или какой-нибудь недочет, напишите нам в соц.сетях:
 
+Телеграм, ВК
+
 @drachiovaelena, https://vk.com/drachiovaelena
 
 @IZ_PROGRAMMER, https://vk.com/programmer7
