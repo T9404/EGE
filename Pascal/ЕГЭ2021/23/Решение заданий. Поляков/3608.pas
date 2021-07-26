@@ -1,4 +1,5 @@
-﻿function getPrime(x:integer):integer;
+﻿// :)
+function getPrime(x:integer):integer;
 begin
   var prime := true;
   var n := x + 1;
