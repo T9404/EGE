@@ -138,7 +138,7 @@ using namespace std;
 
 
 int main() {
-	int num = 12;
+	int num =   1 == 1 ? 12 : 23; // если 1 == 1, то num = 12; иначе num=23;
 
 		if (num > 12) {
 		return true; 
