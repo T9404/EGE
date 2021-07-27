@@ -5,6 +5,7 @@
 https://kpolyakov.spb.ru/school/ege.htm  Брать задачи
 
 https://www.youtube.com/channel/UC2wsZ7vK4eRniLO4AFZUOHQ Внимательно слушать Алексея Кабанова
+https://vk.com/ege_info_open 
 
 https://www.youtube.com/channel/UCJdc8rnYV5eEUqLlyAJDQwQ Вадим-непобедим
 
