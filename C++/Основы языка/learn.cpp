@@ -128,3 +128,35 @@ ceil(2.3); - округлит в 3 (большую сторону)
 floor(2.99); - округлит в 2 (меньшую сторону)
 
 */
+
+// VI) Условные операторы:
+/*
+if; else if; else; switc-case;
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+	int num = 12;
+
+		if (num > 12) {
+		return true; 
+		} else if (num == 12) {
+		cout << "Num is 12";
+		} else {
+		return false;}
+
+
+	switch (num) {
+		case 1:
+			cout << "Num is 1";
+		case 12:
+			cout << "Num is 12" << endl;
+		case 13:
+			cout << "Num is 13";
+		default: // можно не писать, в случае если ничего не выполнится- выполнится default
+			cout << "I dont know";
+		}
+*/
+
