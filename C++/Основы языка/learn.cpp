@@ -158,5 +158,7 @@ int main() {
 		default: // можно не писать, в случае если ничего не выполнится- выполнится default
 			cout << "I dont know";
 		}
+	return 0; 
+}
 */
 
