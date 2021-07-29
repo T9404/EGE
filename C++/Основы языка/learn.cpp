@@ -294,6 +294,36 @@ delete[] arr; -удаление большого массива
 */
 
 
+// XI) Работа со строками
+/*
+include <string>
+
+string a = "dasDA";
+cout << a.size(); // 5
+
+string a = "dasDA";
+a.append("a"); // dasDAa
+
+string a = "dasDA";
+a.pop_back(); // dasD
+	
+string a = "dasDA";
+a.insert(0, 3, 'a');  // aaadasDA
+
+string a = "dasDA";
+a.insert(0, 1, 'a'); // adasDA
+
+string a = "dasDA";
+a.erase(1, 2); // удаляет с позиции х, до y. Вывод: dDA
+
+существует replace. Он не работает
+как нам надо(
+
+string a = "dasDA";
+cout << a.find("ee"); // если находит - возвращает индекс элемента, иначе 4294967295
+
+to_string(12); // преобразует 12 в строку 
+*/
 
 
 // P.S. Прикольные штуки
