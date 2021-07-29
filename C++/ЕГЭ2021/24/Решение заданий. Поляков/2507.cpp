@@ -22,6 +22,5 @@ int main() {
 
 	cout << symb << " " << maxcnt;
 	fin.close();
-
 	return 0;
 }
