@@ -3,6 +3,8 @@
 f=open('C:\\Users\\XiaoMai\\Downloads\\27-19b.txt')
 n=int(f.readline())
 
+
+#1) Решение
 s=[1]
 max_pr=0
 
@@ -15,3 +17,17 @@ for i in range(n):
         max_pr=max(max_pr,a)
 
 print(max_pr)
+
+#2) Решение
+f = open('27-19b.txt')
+n = int(f.readline())
+mak = 1
+suma = 1 
+for _ in range(n):
+    x = int(f.readline())
+    if x != 0:
+        suma*=x
+    else:
+        mak = max(suma, mak)
+        suma = 1
+print(mak)
