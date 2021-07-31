@@ -21,6 +21,11 @@ for i in permutations(word, r=6):
 a1 = list(set(a))
 print(len(a1))
 
+
+
+
+
+
 #2 Решение
 from itertools import permutations
 a = []
