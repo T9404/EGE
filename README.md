@@ -1,6 +1,6 @@
-Здесь будут находиться алгоритмы решений задач, написанных на разных языках. 
+🔥 Здесь будут находиться алгоритмы решений задач, написанных на разных языках. 
 
-Полезное по подготовке:
+🧠 Полезное по подготовке:
 
 https://kpolyakov.spb.ru/school/ege.htm  Брать задачи
 
@@ -20,7 +20,7 @@ https://www.youtube.com/c/%D0%A2%D0%B8%D0%BC%D0%BE%D1%84%D0%B5%D0%B9%D0%A5%D0%B8
 
 https://silvertests.ru/AvailablePartCourses.aspx - простая информатика :)
 
-Вузы
+📊 Вузы:
 
 https://docs.google.com/spreadsheets/d/1uhqpABXAhwdrWSp_vsAYeON3FfhVyqFw/edit#gid=1733179265
 
@@ -28,21 +28,21 @@ https://docs.google.com/spreadsheets/d/1GRLfARfnzKiIaNsUtf2gu1nt8rwtbWWbZvZJIdpL
 
 
 
-Прочитать что-нибудь интересное по ВУЗам:
+🕮 Прочитать что-нибудь интересное по ВУЗам:
 
 https://2ch.hk/un/arch/2021-06-08/res/828991.html
 
 
 
 
-P.S.
+😊 P.S.
 
 Если вы нашли ошибку в программе или какой-нибудь недочет, напишите нам в соц.сетях:
 
 Телеграм, ВК
 
-@drachiovaelena, https://vk.com/drachiovaelena
+• @drachiovaelena, https://vk.com/drachiovaelena
 
-@IZ_PROGRAMMER, https://vk.com/programmer7
+• @IZ_PROGRAMMER, https://vk.com/programmer7
 
-@help_Tom
+• @help_Tom
