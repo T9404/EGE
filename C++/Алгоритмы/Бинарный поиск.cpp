@@ -32,8 +32,8 @@ int main()
 
     /* поиск числа num в массиве a */
     if ((ret = binsearch(num, a, nsize)) < 0)
-        printf("\nNot found", num);
+        printf("\n Not found ", num);
     else
-        printf("\n%d in array\n", num, ret);
+        printf("\n %d in array \n", num, ret);
     return 0;
 }
