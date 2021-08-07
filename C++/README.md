@@ -17,3 +17,9 @@ https://www.youtube.com/playlist?list=PLRDzFCPr95fL_5Xvnufpwj2uYZnZBBnsr
 http://cppstudio.com/
 
 https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+
+Где практиковаться:
+
+https://edabit.com/challenges
+
+https://www.codewars.com/
