@@ -20,6 +20,8 @@ http://cppstudio.com/
 
 https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
 
+(づ｡◕‿‿◕｡)づ
+
 Где практиковаться:
 
 https://edabit.com/challenges
