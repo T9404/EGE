@@ -16,6 +16,8 @@ https://www.youtube.com/channel/UCxAZM_7sunA166ycxTj0Etw  Alex Danov - паск�
 
 https://www.youtube.com/c/IRONPROGRAMMER/featured C# - ЕГЭ и не только
 
+https://github.com/tanookki/FizMatInf - материалы по подготовке к предметам
+
 https://www.youtube.com/c/%D0%A2%D0%B8%D0%BC%D0%BE%D1%84%D0%B5%D0%B9%D0%A5%D0%B8%D1%80%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2/featured  - алгоритмы для общего развития
 
 https://silvertests.ru/AvailablePartCourses.aspx - простая информатика :)
