@@ -2,7 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
-using namespace std
+using namespace std;
 
 int f(int x) {
 	int mina = 1000000;
@@ -13,12 +13,13 @@ int f(int x) {
 			div.push_back(i);
 			div.push_back(x / i);
 		}
-		for (int j = 0; j < div.size(); j++) {
-			if ((div[j] % 10 == 8) and (div[j] != 8) and (div[j] != x)) {
-				mina = min(div[j], mina);
-			}
+	}
+	for (int j = 0; j < div.size(); j++) {
+		if ((div[j] % 10 == 8) and (div[j] != 8) and (div[j] != x)) {
+			mina = min(div[j], mina);
 		}
 	}
+
 	if (mina != 1000000)
 		return mina;
 	else
