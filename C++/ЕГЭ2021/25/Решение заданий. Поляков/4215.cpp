@@ -2,7 +2,8 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
-using namespace std;
+using namespace std
+
 int f(int x) {
 	int mina = 1000000;
 	vector<int> div;
@@ -24,12 +25,8 @@ int f(int x) {
 		return false;
 }
 
-
 int main() {
-
-
 	int count = 0;
-
 	for (int i = 500001; i <= 510020; i++) {
 		if (count == 5)
 			break;
@@ -38,7 +35,5 @@ int main() {
 			count++;
 		}
 	}
-
-
 	return 0;
 }
