@@ -367,5 +367,21 @@ sizeoff(arr)/sizeoff(int); // массив с int числами, делим н�
 
 	int* array = new int[12]; // динамический массив
 
+8) Возвращение массива из функции
+
+vector<int> func(vector<int> a, vector<int> b) {
+	vector<int> z = { a[0], b[0] };
+	return z;
+}
+int main() {
+
+	vector<int> ab = { 1, 2, 3, 4 };
+	vector<int> bc = { 1, 2, 3, 2 };
+
+	vector<int> c = func(ab, bc);
+
+	std::cout << c[0] << " " << c[1] << endl;
+	return 0;
+}
 
 */
