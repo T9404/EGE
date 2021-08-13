@@ -401,5 +401,17 @@ int main() {
 	return 0;
 }
 
+) "Продвинутый" цикл
+	vector<int> ab = { 1, 2, 3, 4 };
+	vector<int> bc = { 11, 21, 31, 21 };
 
+	for (auto &element : ab) { // & - ссылка на элемент
+		for (int &element_2 : bc) {
+			swap(element, element_2);
+		}
+	}
+	for (auto element : ab) {
+		cout << element << endl;
+	}
+	
 */
