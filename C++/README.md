@@ -2,6 +2,8 @@
 
 Что можно посмотреть:
 
+https://docs.microsoft.com/ru-ru/cpp/?view=msvc-160
+
 https://metanit.com/cpp/tutorial/
 
 https://ru.cppreference.com/w/cpp
