@@ -22,6 +22,8 @@ https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
 
 Где практиковаться:
 
+https://www.codewars.com/
+
 https://edabit.com/challenges
 
-https://www.codewars.com/
+
