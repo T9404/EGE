@@ -3,7 +3,7 @@
 #Найдите максимальную сумму (при которой длина тоже максимальная) подряд идущих нечетных сумм пар в последовательности.
 #Гарантируется, что искомую сумму получить можно. Программа должна напечатать одно число – максимально возможную длину, соответствующую условиям задачи.
 
-1)
+# 1)Авторский способ
 f=open('27-B.txt')
 n=int(f.readline())
 posl=[]
@@ -32,7 +32,7 @@ for i in posl:
 print(max_len)
 
 
-2)
+# 2) Способ от чудака(меня)
 from itertools import *
 f = open('27-B.txt')
 n = int(f.readline())
@@ -40,22 +40,22 @@ max_s, max_l = 0, 0
 s, l = 0, 0
 for _ in range(n):
     para = [int(x) for x in f.readline().split()]
-s1 = sorted([a + b for a, b in combinations(para, 2)])
+    s1 = sorted([a + b for a, b in combinations(para, 2)])
 
-m = 0
-for i in s1:
-    if
-i % 2 != 0:
-m = max(m, i)
-if m != 0:
-    s += m
-l += 1
+    m = 0
+    for i in s1:
+        if i % 2 != 0:
+            m = max(m, i)
+    
+    if m != 0:
+        s += m
+        l += 1
 
-else:
-if (max_l < l) and (s == max_s or s > max_s):
-    max_l = l
-max_s = s
+    else:
+        if (max_l < l) and (s == max_s or s > max_s):
+            max_l = l
+            max_s = s
 
-l, s = 0, 0
+        l, s = 0, 0
 
 print(max_l)
