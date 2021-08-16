@@ -2,6 +2,8 @@
 
 Что можно посмотреть:
 
+https://docs.microsoft.com/ru-ru/cpp/?view=msvc-160
+
 https://metanit.com/cpp/tutorial/
 
 https://ru.cppreference.com/w/cpp
@@ -22,6 +24,8 @@ https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
 
 Где практиковаться:
 
+https://www.codewars.com/
+
 https://edabit.com/challenges
 
-https://www.codewars.com/
+
