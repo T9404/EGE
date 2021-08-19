@@ -26,4 +26,4 @@ for _ in range(n):
     razn.sort() #сортируем по возрастанию все разницы
     razn = razn[:2] #удаляем мусор
      
-print(d[0]-sum(razn)) #ответ
+print(d[0]-sum(razn)) 
