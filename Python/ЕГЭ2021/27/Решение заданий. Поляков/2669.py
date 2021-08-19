@@ -17,7 +17,7 @@ mina = float('inf')
 
 for _ in range(n-6):
     x  = int(f.readline()) 
-    d = min([i for i in para if i % 2 == 1]) #берем минимальное нечетное число из мас.расстояния
+    d = min([i for i in para if i % 2 == 1]) #берем минимальное нечетное число из 'para'
     
     para.append(x) #добавляем новое число
     
