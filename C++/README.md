@@ -28,4 +28,4 @@ https://www.codewars.com/
 
 https://edabit.com/challenges
 
-
+https://stepik.org/course/7/syllabus
