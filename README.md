@@ -8,13 +8,13 @@ https://www.youtube.com/channel/UC2wsZ7vK4eRniLO4AFZUOHQ Внимательно 
 
 https://www.youtube.com/channel/UCJdc8rnYV5eEUqLlyAJDQwQ Вадим-непобедим
 
+https://www.youtube.com/channel/UCxAZM_7sunA166ycxTj0Etw  Alex Danov - паскаль и как с ним жить
+
 https://www.youtube.com/user/eevvggeenniijj Прокачка мозга нестандартом 
 
 https://www.youtube.com/channel/UCYszoUecy8xroj_kjPOgOQQ ЕГЭ и степик
 
 https://www.youtube.com/channel/UC0f-GuGlcxH5IhkHLvo_CwA  ФЛЭШ-эксель
-
-https://www.youtube.com/channel/UCxAZM_7sunA166ycxTj0Etw  Alex Danov - паскаль и как с ним жить
 
 https://www.youtube.com/c/IRONPROGRAMMER/featured C# - ЕГЭ и не только
 
