@@ -26,8 +26,6 @@ https://github.com/tanookki/FizMatInf - материалы по подготов
 
 https://www.youtube.com/user/tkhirianov  - алгоритмы для общего развития
 
-https://silvertests.ru/AvailablePartCourses.aspx - простая информатика :)
-
 📊 Вузы:
 
 https://docs.google.com/spreadsheets/d/1uhqpABXAhwdrWSp_vsAYeON3FfhVyqFw/edit#gid=1733179265
