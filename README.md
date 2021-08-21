@@ -18,6 +18,8 @@ https://www.youtube.com/channel/UCYszoUecy8xroj_kjPOgOQQ ЕГЭ и степик
 
 https://www.youtube.com/channel/UC0f-GuGlcxH5IhkHLvo_CwA  ФЛЭШ-эксель
 
+https://www.youtube.com/channel/UCtGc4H_x9XkBvSooIwOoYWw/featured АР из Школково 
+
 https://www.youtube.com/c/IRONPROGRAMMER/featured C# - ЕГЭ и не только
 
 https://github.com/tanookki/FizMatInf - материалы по подготовке к предметам
