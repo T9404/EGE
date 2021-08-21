@@ -10,6 +10,8 @@ https://www.youtube.com/channel/UCJdc8rnYV5eEUqLlyAJDQwQ Вадим-непобе
 
 https://www.youtube.com/channel/UCxAZM_7sunA166ycxTj0Etw  Alex Danov - паскаль и как с ним жить
 
+https://www.youtube.com/channel/UCmUcjDHUkIMhfqBfyHYXYuA Информатик БУ (легенда)
+
 https://www.youtube.com/user/eevvggeenniijj Прокачка мозга нестандартом 
 
 https://www.youtube.com/channel/UCYszoUecy8xroj_kjPOgOQQ ЕГЭ и степик
