@@ -17,5 +17,6 @@ int main() { //Решение Евгения Джобса
 		}
 		cout << m;
 	
+	f.close();
 	return 0;
 }
