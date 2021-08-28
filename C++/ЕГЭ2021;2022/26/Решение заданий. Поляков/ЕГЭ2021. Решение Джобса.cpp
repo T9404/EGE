@@ -21,5 +21,7 @@ int main() {
 				r = nums[i][0];
 				m = -nums[i][1] + 1;
 			}
+	f.close();
 	cout << r << " " << m;
-}
+	return 0;
+}
