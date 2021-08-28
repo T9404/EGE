@@ -16,5 +16,7 @@ int main() {
 	string s, s1 = "BOSS";
 	f >> s;
 	cout << countBOSS(s, s1) << endl;
+	
+	f.close();
 	return 0;
 }
