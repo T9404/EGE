@@ -14,14 +14,17 @@ int main() {
 		nums.push_back(temp);
 	}
 	sort(nums.begin(), nums.end());
+	
+	
 	r = 0; m = 0;
 	for (int i = 1; i < nums.size(); i++)
 		if (nums[i][0] == nums[i - 1][0])
 			if (nums[i][1] - nums[i - 1][1] == 3) {
 				r = nums[i][0];
-				m = -nums[i][1] + 1;
-			}
-	f.close();
+				m = -nums[i][1] + 1; }
+	
 	cout << r << " " << m;
+	
+	f.close();
 	return 0;
 }
