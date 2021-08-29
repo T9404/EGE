@@ -1,4 +1,5 @@
-def f(s): # ходы
+# https://www.youtube.com/watch?v=-cD14dribi4&t=8771s&ab_channel=AlexDanov Подробное объяснение автора
+def f(s): # ходы 
     return s+1,  s*2
 def win(s): # определение победы
     return s >= 29
