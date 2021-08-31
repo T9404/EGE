@@ -23,5 +23,8 @@ int main() {
 		}
 	}
 	cout << max_len;
+	
+	f.close();
+	
 	return 0;
 }

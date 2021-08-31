@@ -32,6 +32,7 @@ int main() {
 
 	}
 	cout << count[5];
-
+	
+	f.close();
 	return 0;
 }

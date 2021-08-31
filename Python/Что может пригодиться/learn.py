@@ -121,6 +121,19 @@ a_new = {i for i in [9, 8, 9, 8, 7]}
 print(a_new) #посмотрите что вернуло
 #add, remove, pop, discard(удаление, даже если не сущ элемента)
 
+
+
+#12 Работа со словарями:
+print('>>>>>>> словари')
+sl = {}
+sl['abc'] = 12 # abc - ключ, 12 - значение
+sl[121] = '121'
+sl['rrrr'] = 'mmmm'
+sl.pop(121)
+for key, value in sl.items():
+    print(key, value)
+
+
 '''
 СМОТРИТЕ на вывод
 '''
