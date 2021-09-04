@@ -1,5 +1,5 @@
 #зАдАчА с открытого курса №8
-#https://vk.com/doc18466579_608953613?hash=1b76b3eb7ac6b42203&dl=4762d7fe0023ac5615
+#https://vk.com/ege_info_open?w=wall-205865487_471
 
 f = open('17.txt')
 d = []
