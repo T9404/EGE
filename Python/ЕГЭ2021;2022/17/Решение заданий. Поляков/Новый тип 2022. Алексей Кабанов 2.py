@@ -12,7 +12,7 @@ while True:
         
 k, mik = 0, float('inf')
 
-for i in range(1, len(d)): # с 0 и 1го элемента начало
+for i in range(1, len(d)): # с 0 и 1го элементов начало
     
     a = int(d[i-1]); b = int(d[i]) # a и b будут с теми же знаками!
     
