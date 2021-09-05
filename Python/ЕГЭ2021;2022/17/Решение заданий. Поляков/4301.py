@@ -1,6 +1,3 @@
-#зАдАчА с открытого курса №2
-#https://vk.com/ege_info_open?w=wall-205865487_471
-
 f = open('17.txt')
 d = []
 while True: 

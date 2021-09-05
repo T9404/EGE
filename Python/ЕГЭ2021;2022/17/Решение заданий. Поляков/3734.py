@@ -40,3 +40,9 @@ print(k, mak)
 https://ege-study.ru/ru/ege/materialy/informatika/zadacha-16-razbor-razlichnyx-tipov-zadach/
 '''
 
+
+#Решение №3
+
+a=[x for x in range(10,10000) if (x%2==1) and ((str(bin(x)[2:]).count('0'))==5) and (x%3==0) and (x%11==0)]
+print(len(a),max(a))
+

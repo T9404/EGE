@@ -1,6 +1,3 @@
-#зАдАчА с открытого курса №8
-#https://vk.com/ege_info_open?w=wall-205865487_471
-
 f = open('17.txt')
 d = []
 while True: 
@@ -14,7 +11,7 @@ k, mik = 0, float('inf')
 
 for i in range(1, len(d)-1): # с 0, 1 и 2го элементов начало
     
-    a = int(d[i-1]); b = int(d[i]); c = int(d[i+1]) # a и b будут с теми же знаками!
+    a = int(d[i-1]); b = int(d[i]); c = int(d[i+1]) # a, b, c будут с теми же знаками!
 
     if (a < b < c):
         mik = min(c-a, mik)
