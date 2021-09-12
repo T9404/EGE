@@ -3,7 +3,7 @@ n=int(f.readline())
 
 count=0
 mas=[[0,0]]
-for _ in range(n-1):
+for _ in range(n):
     x=int(f.readline())
     mas=[[x+b,c+1] for b,c in mas]+[[x,1]]
     num=-1
