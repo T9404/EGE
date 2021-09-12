@@ -1,3 +1,6 @@
+# Оба решения похожи, различная реализация. Выбирайте, что удобно
+
+#1) Способ
 f=open('C:\\Users\\XiaoMai\\Downloads\\27-74b.txt')
 n=int(f.readline())
 
@@ -14,3 +17,27 @@ for _ in range(n):
         if (i[1]>20):
             mas.remove(i)
 print(count)
+
+#2) Способ
+f = open('27-74b.txt')
+n = int(f.readline())
+k = 0
+s = [ [0, 0] ]
+for i in range(n):
+    x = int(f.readline())
+
+    cmb = [ [ sm + x, c + 1] for sm, c in s] + [ [x, 1]]
+ 
+    j = 0
+    while j < len(cmb):
+        if cmb[j][0] %39 == 0 and cmb[j][1] <= 20:
+            k+=1
+            
+        if cmb[j][1] > 20:
+            del(cmb[j])
+            j-=1
+        j+=1
+    
+
+    s = cmb
+print(k)
