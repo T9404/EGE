@@ -2,3 +2,4 @@
 .vscode
 .vs
 *.xml
+**/__pycache__
