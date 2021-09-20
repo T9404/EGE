@@ -1,3 +1,4 @@
+#1 Решение
 f=open('C:\\Users\\XiaoMai\\Downloads\\27-B.txt')
 n=int(f.readline())
 
@@ -18,3 +19,17 @@ for _ in range(n):
 print(c)
 
 
+# 2 Решение
+f = open('27-B.txt')
+n = int(f.readline())
+
+a = []
+c = 0
+
+for _ in range(n):
+    x = int(f.readline())
+    for y in a:
+        if abs(x-y) % 13 == 0 and (x*y) % 2 == 0:
+            c+=1
+    a.append(x)
+print(c)
