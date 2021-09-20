@@ -35,8 +35,9 @@
 
 ### 👅 Изучение языков программирования:
 
-    https://www.javatpoint.com/
-    https://pythontutor.ru/
+    https://www.javatpoint.com/ ---------->(Все)
+    https://pythontutor.ru/ ----->(Python)
+    https://ulearn.me/ -------->(C#)
 
 ---
 
