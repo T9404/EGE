@@ -38,6 +38,7 @@
     https://www.javatpoint.com/ ---------->(Все)
     https://pythontutor.ru/ ----->(Python)
     https://ulearn.me/ -------->(C#)
+    https://ravesli.com/uroki-cpp/ ----->(C++)
 
 ---
 
