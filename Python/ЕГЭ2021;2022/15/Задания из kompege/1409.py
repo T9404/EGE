@@ -10,6 +10,7 @@ for x in range(1, 1000):
     if not f(x, a):
         a.append(x)
 z = 1
+
 for i in range(len(a)):
     z *= a[i]
 print(z)
