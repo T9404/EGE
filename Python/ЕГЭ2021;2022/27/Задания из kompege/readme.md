@@ -1,1 +1,1 @@
-## Задания: https://kompege.ru/task
+## https://kompege.ru/task
