@@ -36,10 +36,11 @@
 
 ### 👅 Изучение языков программирования:
 
-    https://www.javatpoint.com/ ---------->(Все)
-    https://goalkicker.com/ ---------->(Все)
+    https://www.javatpoint.com/ ---------->(Всё)
+    https://goalkicker.com/ ---------->(Всё)
     https://pythontutor.ru/ ----->(Python)
     https://ulearn.me/ -------->(C#)
+    https://github.com/JoshuaJakowlew/cppfaq(С++)
 
 ---
 
