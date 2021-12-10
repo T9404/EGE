@@ -65,12 +65,9 @@
 Телеграм, ВК
 
 > @drachiovaelena, https://vk.com/drachiovaelena
- 
-> @IZ_PROGRAMMER, https://vk.com/programmer7
 
 > @help_Tom
 
-> @m_braindead
 
 
 
