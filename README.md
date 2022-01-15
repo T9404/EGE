@@ -38,10 +38,10 @@
 ### 👅 Изучение языков программирования:
 
     https://www.javatpoint.com/ ---------->(Всё)
+    https://www.geeksforgeeks.org/ --->(Всё)
     https://goalkicker.com/ ---------->(Всё)
     https://pythontutor.ru/ ----->(Python)
     https://ulearn.me/ -------->(C#)
-    https://www.geeksforgeeks.org/ --->(С++)
 
 ---
 
