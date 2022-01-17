@@ -5,7 +5,8 @@ def F(n):
 
     if (len(a)!=0) and ((max(a)+min(a))%123==17):
         return max(a)+min(a)
-    else: return 0
+    else:
+        return 0
 
 c=0
 for i in range(250201,10000000000,1):
@@ -13,7 +14,8 @@ for i in range(250201,10000000000,1):
         c+=1
         if (c<=5):
             print(i,F(i))
-        else: break
+        else:
+            break
 
 
 
