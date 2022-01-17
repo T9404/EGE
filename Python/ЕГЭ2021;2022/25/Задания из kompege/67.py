@@ -8,4 +8,4 @@ def f(x):
 
 for x in range(81234, 134689+1):
     if len(f(x)) == 3:
-        print(*f(x))
+        print(*sorted(f(x)))
