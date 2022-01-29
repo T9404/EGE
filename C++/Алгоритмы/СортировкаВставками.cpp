@@ -1,36 +1,25 @@
 #include <iostream>
-using namespace std;
+#include <algorithm>
 
-void Output(int* a, int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << a[i] << " ";
-}
-
-void InsertSort(int* a, int n)
-{
-    int tmp;
-    for (int i = 1, j; i < n; ++i)
-    {
-        tmp = a[i];
-        for (j = i - 1; j >= 0 && a[j] > tmp; --j)
-            a[j + 1] = a[j];
-        a[j + 1] = tmp;
-       
+void selection_sort(int *a, int n) {
+    for (int i = 0; i < n-1; i++) {
+        for (int j = i+1; j < n; j++) 
+        {
+            if (a[i] > a[j]) 
+                std::swap(a[i], a[j]);
+        }
     }
-    Output(a, n);
+
 }
 
-int main()
-{
-    int* a = new int[5];
+int main() {
+
+    int a[5] = {5, 52, 11, 3, 1};
+
+    selection_sort(a, 5);
 
     for (int i = 0; i < 5; i++)
-        cin >> a[i];
-
-    InsertSort(a, 5);
-
-    delete[]a;
+        std::cout << a[i] << " ";
 
     return 0;
 }
