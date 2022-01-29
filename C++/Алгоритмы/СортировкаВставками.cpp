@@ -1,22 +1,27 @@
 #include <iostream>
 #include <algorithm>
 
-void selection_sort(int *a, int n) {
-    for (int i = 0; i < n-1; i++) {
-        for (int j = i+1; j < n; j++) 
-        {
-            if (a[i] > a[j]) 
-                std::swap(a[i], a[j]);
-        }
-    }
+void insertion_sort(int *array, int size) {
+   int key, j;
 
+   for(int i = 1; i<size; i++) 
+   {
+      key = array[i];
+      j = i;
+      while(j > 0 and array[j-1]>key) 
+      {
+         array[j] = array[j-1];
+         j--;
+      }
+      array[j] = key;   
+   }
 }
 
 int main() {
 
-    int a[5] = {5, 52, 11, 3, 1};
+    int a[5] = {5, 0, 100, 3, 1};
 
-    selection_sort(a, 5);
+    insertion_sort(a, 5);
 
     for (int i = 0; i < 5; i++)
         std::cout << a[i] << " ";
