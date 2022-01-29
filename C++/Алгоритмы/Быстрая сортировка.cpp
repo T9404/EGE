@@ -30,19 +30,17 @@ void quickSort(int* array, int low, int high)
 
 int main()
 {
-    int array[] = { 95, 45, 48, 98, 1, 485, 65, 478, 1, 2325 };
-    int n = sizeof(array) / sizeof(array[0]);
+    int array[10] = { 95, 45, 48, 98, 1, 485, 65, 478, 10, 2325 };
+    int n = 10;
     
     for (int i = 0; i < n; ++i)
-        std::cout << array[i] << std::endl;
+        std::cout << array[i] << " ";
 
     quickSort(array, 0, n);
-
-    std::cout << "####################" << std::endl;
+    std::cout << "\n";
 
     for (int i = 0; i < n; ++i)
-        std::cout << array[i] << std::endl;
-
-
-    return (0);
+        std::cout << array[i] << " ";
+    
+    return 0;
 }
