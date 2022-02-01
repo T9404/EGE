@@ -1,5 +1,6 @@
 #  Подробное объяснение автора
 # https://www.youtube.com/watch?v=-cD14dribi4&t=8771s&ab_channel=AlexDanov
+# Другие реализации смотрите далее
 
 def f(s): # ходы 
     return s+1,  s*2
