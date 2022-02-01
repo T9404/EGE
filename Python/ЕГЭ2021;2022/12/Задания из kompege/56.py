@@ -7,5 +7,5 @@ while '25' in s or '355' in s or '4555' in s:
         s = s.replace('355', '2', 1)
     if '4555' in s:
         s = s.replace('4555', '3', 1)
-        
+
 print(s)

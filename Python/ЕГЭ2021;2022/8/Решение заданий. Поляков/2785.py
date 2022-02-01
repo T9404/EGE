@@ -1,7 +1,9 @@
 from itertools import *
 
-# Обозначу (↑, →, ↓, ←) как (0, 1, 2, 3) 
+
+# Обозначу (↑, →, ↓, ←) как (0, 1, 2, 3)
 k = 0
+
 for i in product('0123', repeat=4):
     w = ''.join(i)
     if w[0] != '0':
