@@ -1,5 +1,7 @@
 f = open('17 (2).txt')
+
 a = [int(x) for x in f.readlines()]
+
 k = 0
 mak = float('inf')
 

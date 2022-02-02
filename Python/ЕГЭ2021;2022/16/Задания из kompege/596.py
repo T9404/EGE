@@ -8,4 +8,5 @@ def f(n):
     elif (n > 3) and (n % 3 == 2):
         return n*n+f(n-2)
 
+
 print(f(100))
