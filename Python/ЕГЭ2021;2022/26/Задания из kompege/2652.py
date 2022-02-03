@@ -1,4 +1,4 @@
-f = open('2652.txt') #2652
+f = open('2652.txt')  # 2652
 n = int(f.readline())
 
 barcode = {}
@@ -13,6 +13,7 @@ for _ in range(n):
 
 
 mak = 0
+
 for m in barcode.items():
     if m[1] > mak:
         mak = m[1]

@@ -1,7 +1,8 @@
 f = open('2651.txt')
 n = int(f.readline())
 
-arr = [ (int('19'+f'{i}'), set()) for i in range(61, 91+1) ]
+
+arr = [(int('19'+f'{i}'), set()) for i in range(61, 91+1)]
 
 
 for _ in range(n):
@@ -9,8 +10,8 @@ for _ in range(n):
     arr[year-1961][1].add(type_mark)
 
 
-arr = [ i for i in arr if ( len(i[1]) != 0 )]
-count_lack = sum([8-len(i[1]) for i in arr ])
+arr = [i for i in arr if (len(i[1]) != 0)]
+count_lack = sum([8-len(i[1]) for i in arr])
 
 
 arr.sort(reverse=True)
