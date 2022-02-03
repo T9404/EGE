@@ -1,22 +1,13 @@
-#(№ 2715) (Е. Джобс) Текстовый файл 24-j7.txt состоит не более чем из 106 десятичных цифр.
-#Найдите максимальную длину последовательности, которая состоит из цифр одинаковой четности.
-#Например, в последовательности 1533244622185452354, 5 последовательностей с
-#нечетными цифрами: 1533, 1, 5, 5, 35; и 5 с четными: 244622, 8, 4, 2, 4. Следовательно, искомая последовательность – 244622.
-#В качестве ответа укажите максимальную длину найденной последовательности.
+f = open('C:\\Users\\XiaoMai\\Downloads\\24-j7.txt')
+s = f.readline()
 
-f=open('C:\\Users\\XiaoMai\\Downloads\\24-j7.txt')
-s=f.readline()
+max_length, length = 0, 1
 
-max_length=0
-length=1
-for i in range(0,len(s)-1):
-    if (int(s[i])%2==int(s[i+1])%2):
-        length+=1
-        max_length=max(max_length,length)
+for i in range(0, len(s)-1):
+    if (int(s[i]) % 2 == int(s[i+1]) % 2):
+        length += 1
+        max_length = max(max_length, length)
     else:
-        length=1
+        length = 1
 
 print(max_length)
-
-
-
