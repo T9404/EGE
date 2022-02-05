@@ -3,7 +3,7 @@ from itertools import *
 c, maxc = 0, 0
 
 for i in range(300, 351):
-    a = set(1)
+    a = {1}
     w = 0
 
     for k in range(2, int(i**0.5)+1):
