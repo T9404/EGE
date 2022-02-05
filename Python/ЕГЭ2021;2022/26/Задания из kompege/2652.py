@@ -1,4 +1,4 @@
-f = open('2652.txt')  # 2652
+f = open('2652.txt')  
 n = int(f.readline())
 
 barcode = {}
