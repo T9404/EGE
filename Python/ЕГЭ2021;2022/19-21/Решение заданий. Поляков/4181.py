@@ -1,14 +1,12 @@
 from functools import lru_cache
 
-################################################
+
 def move(h):
     a, b = h
     return (sum(h), b), (a, sum(h))
 
-################################################
 
 @lru_cache(None)
-
 def f(h):
     if sum(h) >= 45:
         return 'WIN'
@@ -21,7 +19,6 @@ def f(h):
     elif all(f(d) in ['P1', 'P2'] for d in move(h)):
         return 'V2'
 
-##################################################
 
 def f__19(h):
     if sum(h) >= 45:
@@ -31,7 +28,6 @@ def f__19(h):
     elif any(f(d) == 'P1' for d in move(h)):
         return 'V1'
 
-##################################################
 
 answer_19 = min([s for s in range(1, 1000) if f__19((7, s)) == 'V1'])
 print(answer_19)

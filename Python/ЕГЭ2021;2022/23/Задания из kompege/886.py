@@ -1,4 +1,5 @@
 k = 0
+
 def f(s, e, count):
     if (s > e):
         return 0

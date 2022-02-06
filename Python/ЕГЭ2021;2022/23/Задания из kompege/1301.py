@@ -6,4 +6,5 @@ def f(s, e):
     else:
         return f(s-2, e)+f(s-5, e)
 
+
 print(f(23, 2))

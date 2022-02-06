@@ -12,9 +12,6 @@ for a in range(2):
                     print(a, b, c, d)
 
 
-
-
-
 print('>>>>>')
 print('a b c d')
 for a, b, c, d in product([0, 1], repeat=4):
