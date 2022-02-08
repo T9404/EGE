@@ -30,8 +30,7 @@ print('>>>>>>>>>')
 Какая строка получится в результате применения приведённой ниже программы к строке, состоящей из 120 идущих подряд цифр 7? 
 '''
 stroka = '7' * 120
-# print(stroka)
-# ПОКА =>  while
+
 while '8887' in stroka or '77' in stroka:
     if '8887' in stroka:
         # 1 -аргумент, в данном случае замена будет один раз при нахождении
@@ -75,7 +74,7 @@ print('>>>>>>>>>')
 а между ними стоит 120 цифр 6? В ответе запишите полученную строку. 
 '''
 word = '5' + '6' * 120 + '5'
-# print(word)
+
 while '63' in word or '664' in word or '6665' in word:
     if '63' in word:
         word = word.replace('63', '4', 1)
@@ -118,18 +117,19 @@ print('>>>>>>>')
 '''
 number = 0
 min = float('inf')
+
 for i in range(81, 85+1):
     letter = '1' * i
 
     while '111' in letter:
         letter = letter.replace('111', '2', 1)
         letter = letter.replace('2222', '1', 1)
-    #print(letter, i)
+   
     if letter.count('1') < min:
         min = letter.count('1')
         number = i
 
-print(min, number)  # P.S. Задача с КОСЯЧНЫМ условием, в ней подразумевается, что "содержащая минимально возможное количество единиц. " 0 единиц входит, хотя по ссути при 0 НЕ СОДЕРЖИТ!!!
+print(min, number)  
 
 
 
