@@ -1,4 +1,6 @@
 d = set()
+
+
 for i in range(1, 1000):
     s = '5' * i
 
@@ -8,4 +10,5 @@ for i in range(1, 1000):
 
     d.add(s)
 
+    
 print(len(d))
