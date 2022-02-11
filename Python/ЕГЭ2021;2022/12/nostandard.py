@@ -18,26 +18,21 @@
 Найдите целые значения a и b, для которых после выполнения программы Чертёжник окажется в точке (5; 3). Ответ запишите в виде двух чисел: сначала a, потом b.
 '''
 
-
 def kweng(a, b):
     left = 0
     right = 0
     left = left - 5
     right = right + 15
-
     for i in range(0, 4):
-        left += 5
-        right += 1
-        left += (a)
-        right += (b)
-    left += 90
-    right += 4
-    
+        left+=5
+        right+=1
+        left+=(a)
+        right+=(b)
+    left+= 90
+    right+=4
     if left == 5 and right == 3:
         return True
     return False
-
-
 for a in range(-100, 100):
     for b in range(-100, 100):
         if kweng(a, b):

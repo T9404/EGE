@@ -6,5 +6,5 @@ def f(s, e):
     else:
         return f(s+1, e)+f(s*2, e)+f(s**2, e)
 
-
 print(f(5, 154))
+

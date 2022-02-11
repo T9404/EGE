@@ -6,5 +6,4 @@ def f(n):
     elif (n > 36):
         return 2*f(n-5)
 
-
 print(f(100))

@@ -4,5 +4,4 @@ def f(n):
     elif n > 1:
         return f(n-1)+5*(n**2)
 
-
 print(f(39))

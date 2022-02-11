@@ -1,5 +1,5 @@
 from itertools import *
-
+k = 0
 
 def f(x):
     if x[0] not in '01':
@@ -7,12 +7,10 @@ def f(x):
             return True
     return False
 
-
-k = 0
-for i in product('01234', repeat=6):  # 5ная С.С.!!
+for i in product('01234', repeat=6): #5ная С.С.!!
     w = ''.join(i)
     if f(w):
-        k += 1
+        k+=1
 
 
 print(k)

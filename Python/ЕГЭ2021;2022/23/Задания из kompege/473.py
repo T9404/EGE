@@ -6,5 +6,4 @@ def f(s, e):
     else:
         return f(s+2, e)+f(s+s-1, e)+f(s+s+1, e)
 
-
 print(f(7, 63))

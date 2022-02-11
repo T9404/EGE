@@ -1,6 +1,4 @@
 from itertools import product
-
-
 w = 'ЩОГБА'
 
 for i, word in enumerate(product(w, repeat=6)):

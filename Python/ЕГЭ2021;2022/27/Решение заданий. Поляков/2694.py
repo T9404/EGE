@@ -1,20 +1,22 @@
+'''
+(№ 2694) Имеется набор данных, состоящий из троек положительных целых чисел. Необходимо выбрать из каждой тройки !два числа! так,
+чтобы сумма всех выбранных чисел делилась на 6 и при этом была минимально возможной. 
+Гарантируется, что искомую сумму получить можно. Программа должна напечатать одно число – минимально возможную сумму, соответствующую условиям задачи.
+'''
+
 f = open('27-34b.txt')
 n = int(f.readline())
 
-
-s = [0]
+s =[0]
 
 for _ in range(n):
-
     para = [int(x) for x in f.readline().split()]
 
     para_2 = [para[0]+para[1], para[0]+para[2], para[1]+para[2]]
 
-    cmb = [a + b for a in para_2 for b in s]
+    cmb = [ a + b for a in para_2 for b in s]
 
-    s = {x % 6: x for x in sorted(cmb, reverse=True)}.values()
-
-
+    s = {x%6:x for x in sorted(cmb, reverse=True)}.values()
+    
 m = min(x for x in s if x % 6 == 0)
-
 print(m)

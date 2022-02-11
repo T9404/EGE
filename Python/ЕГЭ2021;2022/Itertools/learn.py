@@ -17,7 +17,6 @@ P.S. не разу не видел употребление combinations в 8 з
 
 
 
-
 print('>>>>>>')
 print('ЕГЭ | combinations')
 data_1 = list(combinations('ЕГЭ', 2))
@@ -31,8 +30,6 @@ P.S. Редко используется, НО используется.
 '''
 
 
-
-
 print('\n >>>>>>')
 print('ЕГЭ | permutations ')
 data_2 = list(set(permutations('ЕГЭ', r=2)))
@@ -42,10 +39,6 @@ print(data_2)
 2) Возвращает последовательные перестановки длины элементов r в итерируемом элементе. 
 3) Похоже на combinations, но возвращает последовательности, в которых буквы могут менять места относительно друг друга
 '''
-
-
-
-
 
 print('\n >>>>>>')
 print('ЕГЭ | product ')
@@ -61,7 +54,7 @@ print(data_3)
 print('\n >>>>>>>')
 print('ЕГЭ | product | примеры | расскрой комменты и убери "pass" ')
 
-# 1
+#1
 
 for x in range(10):
     for y in range(10):
@@ -71,17 +64,17 @@ for x, y in product(range(10), range(10)):
     pass
     #print(x, y)
 
-# 2
+#2
 
 a = [1, 2, 3, 4]
-b = ['a', 'b', 'c']  # P.S. лучше не называть так переменные
-# print(product(a, b)) #РАСКРОЙ КОММЕНТ И ПОСМОТРИ ВЫВОД, подумай почему так
+b = ['a', 'b', 'c'] #P.S. лучше не называть так переменные
+#print(product(a, b)) #РАСКРОЙ КОММЕНТ И ПОСМОТРИ ВЫВОД, подумай почему так
 for i in product(a, b):
     pass
-    # print(i)
+    #print(i)
 
-# 3
+#3
 
 for x in permutations('ВАРВАРА'):
-    # print(x)
-    pass  # в данном случае будет повтор, в permutation, исправляется: set
+    #print(x)
+    pass # в данном случае будет повтор, в permutation, исправляется: set

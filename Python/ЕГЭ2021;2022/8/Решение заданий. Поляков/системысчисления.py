@@ -7,11 +7,9 @@
 '''
 
 count = 0
-
 for x in range(10000, 20000+1):
     if x % 16**2 == int('1C', 16) or x % 9**2 == int('47', 9):
-        count += 1
-        
+        count+=1
 print(count)
 
 # почему 16**2 ?

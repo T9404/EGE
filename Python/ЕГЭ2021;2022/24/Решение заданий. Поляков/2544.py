@@ -1,8 +1,12 @@
+'''
+(№ 2544) (Е. Джобс) Текстовый файл 24-j5.txt состоит не более чем из 106
+символов S, T, O, C, K. Сколько раз встречается комбинация
+«OCK», не являющаяся при этом частью комбинации «STOCK».
+'''
+
 f = open('24-j5.txt')
 s = f.readline()
 
-
-while 'STOCK' in s:
+while 'STOCK' in s
     s = s.replace('STOCK', '', 1)
-    
 print(s.count('OCK'))

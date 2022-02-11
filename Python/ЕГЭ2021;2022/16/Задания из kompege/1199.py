@@ -6,5 +6,4 @@ def f(n):
     else:
         return 2*f(n-2)
 
-
 print(f(31))

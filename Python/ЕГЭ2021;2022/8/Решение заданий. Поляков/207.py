@@ -1,6 +1,4 @@
 from itertools import *
-
-
 print('>>>>>>')
 # 207 К.Ю.Поляков
 '''
@@ -11,15 +9,11 @@ print('>>>>>>')
 Сколько существует таких слов, которые может написать Вася? 
 '''
 
-
-def ok(x):  # реализация через функция, удобно, используйте
+def ok(x): #реализация через функция, удобно, используйте
     if x.count('С') == 1:
         return True
     else:
         return False
-
-
 s_waw = 'СЛОН'
-m = {x for x in product(s_waw, repeat=5) if ok(x)}  # генератор
-
+m = {x for x in product(s_waw, repeat=5) if ok(x)} #генератор
 print(len(m))

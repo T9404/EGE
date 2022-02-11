@@ -1,26 +1,26 @@
-f = open('файлик')
-n = int(f.readline())
+#(№ 3922) (И. Кобец) Имеется набор данных, состоящий из N различных положительных чисел.
+#Необходимо из этих чисел построить самую длинную возрастающую арифметическую прогрессию c шагом от 1 до 100
+#включительно и вывести её длину.
+#НЕЭФФЕКТИВНОЕ РЕШЕНИЕ, НО РЕШЕНИЕ
 
+f=open('файлик')
+n=int(f.readline())
+a=[int(f.readline()) for _ in range(n)]
+a.sort()
 
-a = sorted([int(f.readline()) for _ in range(n)])
-
-maxl = 0
-
+maxl=0
 for e in range(len(a)):
-    c = a[e]
-    len = 1
-    k = 1
-
-    while (k <= 100):
-        c += k
-
+    c=a[e]
+    len=1
+    k=1
+    while (k<=100):
+        c+=k
         if (c in a):
-            len += 1
-            maxl = max(maxl, len)
+            len+=1
+            maxl=max(maxl,len)
         else:
-            len = 1
-            c = a[e]
-            k += 1
-
+            len=1
+            c=a[e]
+            k+=1
 
 print(maxl)
