@@ -1,10 +1,13 @@
 from itertools import *
-#Прежде чем начинать, посмотрите itertools 
+
+
+# Прежде чем начинать, изучите itertools
 
 
 # Каждую букву использовать 1 раз => permutation
 # Произвольное количество раз => product
 # Обыкновенные комбинации, уникальные => combinations (не использовал в 8 номере еще)
+
 
 
 
@@ -18,12 +21,17 @@ print('>>>>>')
 '''
 amount = 0
 word = 'ЗАПИСЬ'
+
 for i in permutations(word, r=6):
     s = ''.join(i)
     if s[0] != 'Ь' and 'АЬ' not in s and 'ИЬ' not in s:
-        amount+=1
-        #print(s)
+        amount += 1
+        # print(s)
+
 print(amount)
+
+
+
 
 
 print('>>>>>>>')
@@ -35,11 +43,16 @@ print('>>>>>>>')
 '''
 count = 0
 letter = 'БАЛОН'
+
 for i in product(letter, repeat=6):
     j = ''.join(i)
     if j.count('А') <= 1 and j.count('О') <= 1:
-        count+=1
+        count += 1
+
 print(count)
+
+
+
 
 
 print('>>>>>>')
@@ -56,12 +69,17 @@ print('>>>>>>')
 ...
 Найдите номер первого слова в этом списке, которое не содержит гласных и !одинаковых! - set букв. 
 '''
-write = 'АВДПР' # !!!!!!!!!!!!!!!! В этом задании важен порядок кодировки символов, А-1, В-2, Д-3, П-4, Р-5
+write = 'АВДПР'  # В этом задании важен порядок кодировки символов, А-1, В-2, Д-3, П-4, Р-5
+
 for i, word_i in enumerate(product(write, repeat=4)):
     u = ''.join(word_i)
     if len(set(u)) == 4 and 'А' not in u:
         print(u, i+1)
         break
+
+
+
+
 
 print('>>>>>>')
 # 207 К.Ю.Поляков
@@ -73,19 +91,23 @@ print('>>>>>>')
 Сколько существует таких слов, которые может написать Вася? 
 '''
 
-def ok(x): #реализация через функция, удобно, используйте
+
+def ok(x):
     if x.count('С') == 1:
         return True
     else:
         return False
+
+
 s_waw = 'СЛОН'
-m = {x for x in product(s_waw, repeat=5) if ok(x)} #генератор
+m = {x for x in product(s_waw, repeat=5) if ok(x)}
+
 print(len(m))
 
 
-'''
-На этом все типы 8 задания заканчиваются, ВНИМАТЕЛЬНО читайте условия и у вас все получится)
-'''
+
+
+
+''' На этом все типы 8 задания заканчиваются, ВНИМАТЕЛЬНО читайте условия и у Вас все получится) '''
 
 # см. '../ЕГЭ2021/itertools/learn'
-

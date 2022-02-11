@@ -6,6 +6,6 @@ def f(n):
     else:
         return f(n-1)+n*n+5
 
-d = [ i for i in range(1, 1000+1) if all( int(x) % 2 == 0 for x in str(f(i)))]
-print(len(d))
 
+d = [i for i in range(1, 1000+1) if all(int(x) % 2 == 0 for x in str(f(i)))]
+print(len(d))

@@ -1,8 +1,8 @@
 f = open('17-4.txt')
+
+
 a = [int(x) for x in f]
-k = 0
-mik = float('inf')
-mak = float('-inf')
+
 
 def f(x):
     k = 0
@@ -16,9 +16,12 @@ def f(x):
         return 1
     return 0
 
-for i in range(len(a)): 
-    if f(a[i]) and a[i] != 0: 
-        k+=1
+
+k, mik, mak = 0, float('inf'), float('-inf')
+
+for i in range(len(a)):
+    if f(a[i]) and a[i] != 0:
+        k += 1
         mik = min(mik, a[i])
         mak = max(mak, a[i])
 
