@@ -91,24 +91,10 @@ print(a) # [['Первый', 1], ['Третий', 3], ['Второй', 3]]
 
 
 
-
-def func_sort(arr):
-    new_arr = []
-
-    for i in arr:
-	    if (i > 100) and (i % 2 == 0):
-		    new_arr.append(i)
-            
-    return new_arr 
- 
-
-dinam_arr = [1, 100, 200, 3, 1111]
-print(func_sort(dinam_arr)) # [200]
-
-
 '''
 https://proproprogs.ru/python_base/sortirovka-sort-i-sorted
 '''
+
 
 
 
@@ -130,6 +116,7 @@ print(data[-1])
 '''
 https://all-python.ru/osnovy/yield.html
 '''
+
 
 
 
