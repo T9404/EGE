@@ -3,6 +3,7 @@ from functools import lru_cache
 
 def move(e):
     new_h = []
+    
     h, l = e  # h - heap(куча), l - last(последний) ход противника
 
     if l != 1:

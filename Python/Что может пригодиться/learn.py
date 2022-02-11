@@ -98,7 +98,7 @@ def func_sort(arr):
     for i in arr:
 	    if (i > 100) and (i % 2 == 0):
 		    new_arr.append(i)
-    
+            
     return new_arr 
  
 

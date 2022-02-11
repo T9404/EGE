@@ -3,15 +3,21 @@ from functools import lru_cache
 
 def move(h):
     a, b = h
-    ans = []  # записываем ходы в массив
+
+    ans = []  
+
     if a-1 > 0:
         ans.append((a-1, b))
+
     if b-1 > 0:
         ans.append((a, b-1))
+
     if a != 1:
         ans.append((int(a//2), b))
+
     if b != 1:
         ans.append((a, int(b//2)))
+        
     return ans  
 
 

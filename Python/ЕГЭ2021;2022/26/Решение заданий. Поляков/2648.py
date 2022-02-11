@@ -11,6 +11,7 @@ for i in range(n):
     coins += [int(f.readline())]
 
 
+
 notsale = [x for x in coins if x <= 100]
 
 for c in notsale:
@@ -19,10 +20,14 @@ for c in notsale:
 coins.sort()
 
 
+
+
 sale = [coins[:len(coins)//2:]]
 max_sale = max(sale)
 
 notsale += coins[len(coins)//2::]
+
+
 
 
 for i in range(len(sale)):

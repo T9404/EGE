@@ -3,13 +3,16 @@ from functools import lru_cache
 
 def move(h):
     if h > 0:
+
         if h % 2 == 0 and h % 3 == 0:
             return h//2, h-int(h*2//3)
+
         elif h % 2 != 0 and h % 3 == 0:
             return h-2, h - int(h*2//3)
 
         elif h % 2 == 0 and h % 3 != 0:
             return h//2, h-3
+            
         else:
             return h-2, h-3
 
