@@ -6,6 +6,7 @@ m = float('inf')
 
 for a1 in range(10, 70):
     for a2 in range(a1+1, 70+1):
+        
         if all(f(a1, a2, x) == 1 for x in range(1, 100)):
             if m > a2 - a1:
                 m = a2 - a1
