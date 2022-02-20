@@ -13,6 +13,6 @@ for _ in range(n):
 ans = 0
 
 for i in range(len(k_69)):
-    ans += ( k_69[i] * (k_69[i]-1) // 2 )
+    ans += (k_69[i] * (k_69[i]-1) // 2)
 
 print(ans)

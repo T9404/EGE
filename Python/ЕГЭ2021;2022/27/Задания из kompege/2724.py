@@ -1,3 +1,5 @@
+# 1 Решение
+
 f = open('27A.txt')
 n = int(f.readline())
 
@@ -21,3 +23,29 @@ for i in range(1, 65+1):
 
 
 print(ans)
+
+
+
+
+
+
+
+
+# 2 Решение
+
+f = open('27B.txt')
+n = int(f.readline())
+
+
+count_131 = [0]*131
+answer = 0
+
+for i in range(n):
+    x = int(f.readline())
+
+    ostat = 0 if (x % 131 == 0) else (131 - (x % 131))
+    answer += count_131[ostat]
+
+    count_131[x % 131] += 1
+
+print(answer)

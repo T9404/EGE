@@ -1,3 +1,5 @@
+# 1 Решение
+
 f = open('27B.txt')
 n = int(f.readline())
 
@@ -25,3 +27,37 @@ for i in range(1, 39+1):
 
 
 print(ans)
+
+
+
+
+
+
+
+
+
+# 2 Решение
+
+f = open('27B.txt')
+n = int(f.readline())
+
+
+count_all = [0] * 80
+count_big = [0] * 80  # большие 50к
+answer = 0
+
+for i in range(n):
+    x = int(f.readline())
+
+    ostat = 0 if (x % 80 == 0) else (80 - (x % 80))
+
+    if x > 50000:
+        answer += count_all[ostat]
+        count_big[x % 80] += 1
+    else:
+        answer += count_big[ostat]
+
+    count_all[x % 80] += 1
+
+
+print(answer)
