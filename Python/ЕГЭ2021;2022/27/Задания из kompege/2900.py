@@ -1,3 +1,5 @@
+# 1) Способ
+
 f = open('27B.txt')
 n = int(f.readline())
 
@@ -19,3 +21,24 @@ for _ in range(n):
 
 
 print(answer)
+
+# 2) Способ
+
+f = open('27B.txt')
+n = int(f.readline())
+
+
+s = [0]
+ans = 0
+
+for _ in range(n):
+    x = int(f.readline())
+
+    cmb = [a + x for a in s] + [x]
+    s = {x % 1000: x for x in sorted(cmb)}.values()
+    
+    for a in s:
+        if a % 1000 == 0:
+            ans = max(ans, a)
+
+print(ans)

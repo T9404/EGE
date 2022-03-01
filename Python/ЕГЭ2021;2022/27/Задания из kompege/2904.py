@@ -1,3 +1,5 @@
+# 1) Способ
+
 f = open('27A.txt')
 n = int(f.readline())
 
@@ -26,3 +28,28 @@ for i in range(1, n+1):
 
 
 print(max_len)
+
+
+# 2) Способ
+
+f = open('27B.txt')
+n = int(f.readline())
+
+
+s = [[0, 0]]
+minsum, maxlen = float('inf'), 0
+
+
+for i in range(1, n+1):
+    x = int(f.readline())
+
+    cmb = [ [a+x, b+1] for a, b in s] + [ [x, 1] ]
+    s = {x[0]%2077:x for x in sorted(cmb, reverse=True)}.values()
+
+    for a, b in s:
+        if (a % 2077 == 0):
+            if (a < minsum) or (a == minsum and b > maxlen):
+                minsum = a
+                maxlen = b
+    
+print(maxlen)
