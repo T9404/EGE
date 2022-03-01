@@ -19,7 +19,7 @@
 
 + https://www.youtube.com/user/eevvggeenniijj Прокачка мозга нестандартом 
 
-+ https://www.youtube.com/channel/UCYszoUecy8xroj_kjPOgOQQ ЕГЭ и степик
++ https://stepik.org/users/388343822 PRO100 ЕГЭ и степик
 
 + https://www.youtube.com/channel/UC0f-GuGlcxH5IhkHLvo_CwA  ФЛЭШ-эксель
 
