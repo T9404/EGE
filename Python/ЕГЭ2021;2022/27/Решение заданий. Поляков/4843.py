@@ -18,9 +18,11 @@ def F(n):
 
 n, k, d = zn[0], zn[1], zn[2]
 
+len, c_os, sum, max_sum = 0, 0, 0, 0
+
+
 s = [[float('inf')]*d for _ in range(k)]
 
-len, c_os, sum, max_sum = 0, 0, 0, 0
 
 for _ in range(n):
     x = int(f.readline())
