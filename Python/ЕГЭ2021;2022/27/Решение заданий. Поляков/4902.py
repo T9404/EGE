@@ -16,6 +16,7 @@ for i in range(1, n+1):
     if x % 7 == 0:
         k7 += 1
 
+        
     if k5 == k7:
         max_len = i
 
@@ -24,6 +25,7 @@ for i in range(1, n+1):
             variant = i - lens[k5-k7]
             max_len = max(variant, max_len)
 
+            
     if i < lens[k5-k7]:
         lens[k5-k7] = i
         defirent[k5 - k7] = k5-k7
