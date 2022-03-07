@@ -17,7 +17,7 @@ string = 'A' + f.readline() + 'A'
 mina = float('-inf')
 
 for i in range(1, len(string)):
-    if string[i] in '1234567890' and string[i-1] in 'ABC':  # 0
+    if string[i] in '1234567890' and string[i-1] in 'ABC': # 0
         answer = ''
 
         while string[i] in '1234567890':
