@@ -27,6 +27,8 @@ print(min_sum)
 
 
 
+
+
 # 2) Способ (опасный!)
 
 from itertools import combinations
@@ -55,3 +57,21 @@ for a, b, c in combinations(numbers, r=3):
         ans = min(a+b+c, ans)
 
 print(ans)
+
+
+
+
+
+
+# 3) Способ Лёни https://vk.com/leonid_shastin
+
+from itertools import combinations
+
+
+d = [[],[],[]]
+
+for x in sorted([int(x) for x in open('27-53b.txt')][1:]):
+    if len(d[x % 3]) < 3:
+        d[x%3] += [x]
+
+print(min(sum(x) for x in combinations(d[0][:3]+d[1][:3]+d[2][:3], 3) if sum(x)%3 == 0))
