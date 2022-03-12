@@ -19,13 +19,15 @@
 
 + https://www.youtube.com/user/eevvggeenniijj Прокачка мозга нестандартом 
 
-+ https://stepik.org/users/388343822 PRO100 ЕГЭ и степик
++ https://www.youtube.com/channel/UCYszoUecy8xroj_kjPOgOQQ PRO100 ЕГЭ и степик
+
++ https://www.youtube.com/channel/UC5A3HZVC0QeHhY5idc8Et5A ботаем вместе с Лёней 
 
 + https://www.youtube.com/channel/UC0f-GuGlcxH5IhkHLvo_CwA  ФЛЭШ-эксель
 
-+ https://www.youtube.com/channel/UCtGc4H_x9XkBvSooIwOoYWw/featured АР из Школково 
++ https://www.youtube.com/channel/UCtGc4H_x9XkBvSooIwOoYWw АР из Школково 
 
-+ https://www.youtube.com/c/IRONPROGRAMMER/featured C# - ЕГЭ и не только
++ https://www.youtube.com/c/IRONPROGRAMMER C# - ЕГЭ и не только
 
 + https://github.com/tanookki/FizMatInf - материалы по подготовке к предметам
 
