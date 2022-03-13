@@ -12,6 +12,6 @@ for _ in range(n):
         if (x+i) % 12 == 0:
             count_pair += d[i]
 
-    d[x % 12] += 1
+    d[x%12] += 1
 
 print(count_pair)
