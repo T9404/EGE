@@ -1,6 +1,21 @@
-Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
+def k5(x):
+    if x%5 == 1:
+        return 0
+    if not(x):
+        return 1
+    return k5(x // 5)
 
-==================== RESTART: C:\Users\lenya\Desktop\git.py ====================
-7376668
-166798285
+for t in 'ab':
+    with open(f'27-90{t}.txt') as f:
+        N, K, D = map(int, f.readline().split())
+
+        m = 0
+        s = {(0, 0): (0, 0)}
+        for i in range(N):
+            x = int(f.readline())
+            rfux = x < 0 and k5(-x)
+            c = [(sm + x, cs + rfux) for sm, cs in s.values()] + [(x, rfux)]
+            s = {(x[0]%D, x[1]%K): x for x in sorted(c)}
+            m = max(m, s.get((0, 0), (0, 0))[0])
+
+        print(m)
