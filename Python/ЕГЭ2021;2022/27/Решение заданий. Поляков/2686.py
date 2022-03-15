@@ -12,5 +12,4 @@ for _ in range(n):
 
 
 m = min(x for x in s if x % 16 == 15)
-
 print(m)
