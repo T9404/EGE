@@ -63,7 +63,7 @@ print(ans)
 
 
 
-# 3) Способ Лёни https://vk.com/leonid_shastin
+# 3) Способ 
 
 from itertools import combinations
 
