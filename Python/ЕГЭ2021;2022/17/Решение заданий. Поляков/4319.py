@@ -1,7 +1,6 @@
 f = open('17-4.txt')
-
-
 a = [int(x) for x in f]
+
 
 
 def f(x):

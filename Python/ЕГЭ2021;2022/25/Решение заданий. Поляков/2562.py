@@ -10,7 +10,7 @@ for x in range(start, end + 1):
     for d in range(2, sq):
         if x % d == 0:
             div += [d, x//d]
-            
+
             if len(div) > 2:
                 break
 

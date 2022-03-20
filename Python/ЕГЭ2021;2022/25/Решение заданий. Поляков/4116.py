@@ -23,6 +23,7 @@ def calc_s(n):
 
 c = 0
 
+
 for i in range(250_001, 10 ** 965):
     s = calc_s(i)
     

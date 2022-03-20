@@ -11,7 +11,7 @@ def move(h):
 
     if (b != 3):
         k.append((a+3, 3))
-        
+
     if (b != 2):
         k.append((a*2, 2))
 

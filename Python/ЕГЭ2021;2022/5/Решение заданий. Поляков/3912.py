@@ -1,5 +1,6 @@
 minc = float('inf')
 
+
 for k in range(101, 10000):
     a = bin(k)[2:]
 
@@ -11,8 +12,9 @@ for k in range(101, 10000):
                 a += '0'
             else:
                 a += '1'
-                
+
     if (int(a, 2) % 4 == 0) and (int(a, 2) % 8 != 0):
         minc = min(minc, k)
+
 
 print(minc)

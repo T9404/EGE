@@ -30,7 +30,7 @@ def f(h, k):  # код для 19 номера
     joke = lambda *numbers: (f(m, k+1) in numbers for m in move(h))
     if any(joke('CP')):
         return 'P1'
-        
+
     if any(joke('P1')):
         return 'B1'
 

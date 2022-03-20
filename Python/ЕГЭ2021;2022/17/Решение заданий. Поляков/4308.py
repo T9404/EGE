@@ -1,17 +1,11 @@
 f = open('17.txt')
 
 
-d = []
-
-while True:
-    x = f.readline()
-    if not x:  # нету x, тогда пока
-        break
-    else:
-        d.append(x)  # ок, берем его
+d = [int(x) for x in f.readlines()]
 
 
 k, mik = 0, 0
+
 
 for i in range(1, len(d)-2):  # с 0, 1 и 2, 3го элементов начало
 
@@ -23,9 +17,10 @@ for i in range(1, len(d)-2):  # с 0, 1 и 2, 3го элементов нача�
     if (abs(a) % 2 != abs(b) % 2):
 
         if (abs(b) % 2 != (abs(c) % 2)):
-            
+
             if (abs(c) % 2 != abs(e) % 2):
                 mik = max(a+b+c+e, mik)
                 k += 1
+
 
 print(k, mik)

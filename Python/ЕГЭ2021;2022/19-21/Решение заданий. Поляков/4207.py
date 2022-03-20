@@ -1,10 +1,10 @@
-from functools import lru_cache  
+from functools import lru_cache
 
 
-def move(h):  
-    a, b, c = h  
+def move(h):
+    a, b, c = h
     return (a+3, b, c), (a, b+3, c), (a, b, c+3), (a+13, b, c), (a, b+13, c), (a, b, c+13), \
-           (a+23, b, c), (a, b+23, c), (a, b, c+23)  
+           (a+23, b, c), (a, b+23, c), (a, b, c+23)
 
 
 @lru_cache(None)  # кэширование. т.е. сохранение промеж. результатов при счёте

@@ -1,6 +1,7 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\24-j7.txt')
 s = f.readline()
 
+
 max_length, length = 0, 1
 
 for i in range(0, len(s)-1):

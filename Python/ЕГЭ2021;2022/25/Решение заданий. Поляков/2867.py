@@ -1,5 +1,6 @@
 from itertools import *
 
+
 c, maxc = 0, 0
 
 for i in range(300, 351):
@@ -14,12 +15,13 @@ for i in range(300, 351):
     if (sum(a) >= i):
         for k in range(2, len(a)-1):
             for q in combinations(a, r=k):
-                
+
                 if (sum(a)-sum(q) == i):
                     w += 1
 
     if (w > 0):
         c += 1
         maxc = max(maxc, i)
+
 
 print(c, maxc)

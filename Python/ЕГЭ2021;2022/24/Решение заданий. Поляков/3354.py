@@ -1,6 +1,7 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\24-4.txt')
 s = str(f.readline())
 
+
 l = s[0]
 m = ''
 

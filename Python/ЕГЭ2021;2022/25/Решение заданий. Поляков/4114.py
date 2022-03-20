@@ -8,6 +8,7 @@ def F(n):
 a = [x for x in range(3, 1000001)]
 c = []
 
+
 for i in range(len(a)):
     if (F(a[i]) == False):
 

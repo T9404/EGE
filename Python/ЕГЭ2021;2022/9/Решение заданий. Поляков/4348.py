@@ -1,5 +1,6 @@
 f = open('9-127.csv')
 
+
 k = 0
 
 for _ in range(5000):

@@ -9,7 +9,7 @@ for i in range(100000, 1, -1):
 
     if l > m:
         l, m = m, l
-        
+
     if l == 3 and m == 7:
         print(i)
         break
