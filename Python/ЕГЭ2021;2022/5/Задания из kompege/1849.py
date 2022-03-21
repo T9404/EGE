@@ -9,7 +9,6 @@ def f(x):
     return int(x_2, 2)
 
 
-# print(f(13))
 m = float('inf')
 
 for i in range(1, 1000):

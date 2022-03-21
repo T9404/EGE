@@ -1,7 +1,9 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\24-s1.txt')
 
+
 all_f, our_len = '', ''
 max_q = 0
+
 
 for s in f:
     all_f += s
@@ -12,6 +14,7 @@ for s in f:
 
 min_count = float('inf')
 min_c = ''
+
 
 for a in range(ord('A'), ord('Z')+1):
     q = chr(a)

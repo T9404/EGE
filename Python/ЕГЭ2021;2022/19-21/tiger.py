@@ -1,5 +1,4 @@
-from functools import lru_cache  
-
+from functools import lru_cache
 
 
 print('>>>>>>>>>>')
@@ -33,8 +32,6 @@ def f(h):  # проверка на победу
 
 for i in range(1, 23+1):  # из условия s - от 1, до 23. помним специфику цикла в питоне
     print(i, f((2, i, i*2)))  # (( )) #т.к. на выходе кортежи
-
-
 
 
 '''

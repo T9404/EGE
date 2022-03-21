@@ -9,6 +9,7 @@ def F(n):
 a = []
 c1 = 0
 
+
 for i in range(10**7-1, 0, -1):
     if F(i) == True:
         c1 += 1
@@ -21,6 +22,7 @@ for i in range(10**7-1, 0, -1):
 
 c2 = 0
 
+
 for i in range(10**7-1, 10**8):
     if F(i) == True:
         c2 += 1
@@ -31,6 +33,7 @@ for i in range(10**7-1, 10**8):
             break
 
 a.sort()
+
 
 for x, y in a:
     print(y, x)

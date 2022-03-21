@@ -1,6 +1,3 @@
-''' Обратите внимание, в этой задачи повторяются ТТ и КК'''
-
-
 from itertools import permutations
 
 

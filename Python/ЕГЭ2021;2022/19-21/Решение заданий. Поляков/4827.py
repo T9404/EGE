@@ -11,7 +11,7 @@ def move(h):
 
     if (b != 3):
         k.append((a+3, 3))
-        
+
     if (b != 2):
         k.append((a*2, 2))
 
@@ -23,13 +23,13 @@ def F(h):
     a, b = h
     if (a >= 55):
         return 'W'
-    if any(F(m) == 'W' for m in move(h)):
+    elif any(F(m) == 'W' for m in move(h)):
         return 'P1'
-    if all(F(m) == 'P1' for m in move(h)):
+    elif all(F(m) == 'P1' for m in move(h)):
         return 'V1'
-    if any(F(m) == 'V1' for m in move(h)):
+    elif any(F(m) == 'V1' for m in move(h)):
         return 'P2'
-    if all(F(m) in ['P1', 'P2'] for m in move(h)):
+    elif all(F(m) in ['P1', 'P2'] for m in move(h)):
         return 'V2'
 
 

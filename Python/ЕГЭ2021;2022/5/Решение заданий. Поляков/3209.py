@@ -7,7 +7,9 @@ def f(x):
 
 
 k = 0
+
 for x in range(2, 1000000):
     if 100 <= f(x) <= 150:
         k += 1
+        
 print(k)

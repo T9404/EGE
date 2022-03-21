@@ -5,7 +5,7 @@ def F(x, a1, a2):
 m = 10000
 
 for a1 in range(100):
-    for a2 in range(a1+1, 100):
+    for a2 in range(a1, 100):
         if all(F(x, a1, a2) == 1 for x in range(100)):
             m = min(m, a2-a1)
 

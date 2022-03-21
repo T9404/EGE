@@ -7,9 +7,11 @@ def isPrime(n):
 
 c, sr = 0, 0
 
+
 for i in range(3 * 10 ** 6, 10 ** 7 + 1):
     if isPrime(i) and isPrime(i + 2):
         c += 1
         sr = (2 * i + 2) // 2  # ( i+(i+2))//2
+
 
 print(c, sr)

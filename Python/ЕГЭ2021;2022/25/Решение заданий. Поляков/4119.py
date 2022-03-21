@@ -14,6 +14,7 @@ def calc_f(n):
 
 c = 0
 
+
 for i in range(550_001, 10 ** 965):
     f = calc_f(i)
 

@@ -10,7 +10,7 @@ def f(x, a1, a2):
 m = 0
 
 for a1 in range(10, 45):
-    for a2 in range(a1+1, 45):
+    for a2 in range(a1, 45):
         if all(f(x, a1, a2) == 0 for x in range(1, 100)):
             if a2-a1 > m:
                 m = a2 - a1

@@ -3,6 +3,7 @@ from itertools import permutations
 
 f = open('9-130.csv')
 
+
 k = 0
 
 for _ in range(5000):

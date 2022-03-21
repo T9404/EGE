@@ -5,6 +5,7 @@ def F(n):
 
 c = 0
 
+
 for i in range(450001, 490000):
     a = set()
     m = 0
