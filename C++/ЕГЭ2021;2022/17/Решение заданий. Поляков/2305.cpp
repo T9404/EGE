@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 int main() {
 	int count = 0, max;
 	for (int i = 1221; i <= 9763; i++) {

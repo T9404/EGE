@@ -1,11 +1,12 @@
-#(№ 4250) (А. Куканова) Лиза составляет слова из букв О, Н, И, К, С,
-#причём буква С должна встречаться в этих словах ровно 3 раза, а буква О — ровно 1 раз.
-#Длина слова составляет от 4 до 6 букв. Сколько различных слов может составить Лиза?
 from itertools import product
-count=0
-for k in range(4,7):
-    for x in product('ОНИКС',repeat=k):
-        s=''.join(x)
-        if (s.count('С')==3) and (s.count('О')==1):
-            count+=1
+
+
+count = 0
+
+for k in range(4, 7):
+    for x in product('ОНИКС', repeat=k):
+        s = ''.join(x)
+        if (s.count('С') == 3) and (s.count('О') == 1):
+            count += 1
+
 print(count)
