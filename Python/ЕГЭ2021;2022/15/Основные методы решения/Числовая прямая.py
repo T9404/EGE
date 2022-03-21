@@ -33,7 +33,7 @@ def f(x, a1, a2):
 m = float('inf')
 
 for a1 in range(35, 80):
-    for a2 in range(a1+1, 80):  # Каждый раз мы создаем новый отрезок и пропускаем его через функцию
+    for a2 in range(a1, 80):  # Каждый раз мы создаем новый отрезок и пропускаем его через функцию
 
         if all(f(x, a1, a2) == 1 for x in range(1, 1000)):
             if a2-a1 < m:
@@ -70,7 +70,7 @@ def f(x, a1, a2):
 m = 0
 
 for a1 in range(2, 15):
-    for a2 in range(a1+1, 15):
+    for a2 in range(a1, 15):
         if all(f(x, a1, a2) == 1 for x in range(1, 1000)):
             if a2-a1 > m:
                 m = a2-a1

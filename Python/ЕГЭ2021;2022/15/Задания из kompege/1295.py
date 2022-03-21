@@ -9,7 +9,7 @@ def f(x, a1, a2):
 m = float('inf')
 
 for a1 in range(10, 90):
-    for a2 in range(a1+1, 90):
+    for a2 in range(a1, 90):
         if all(f(x, a1, a2) == 1 for x in range(10, 6000)):
             if m > a2-a1:
                 z = a2

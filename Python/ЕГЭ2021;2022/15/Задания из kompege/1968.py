@@ -9,7 +9,7 @@ def f(x, a1, a2):
 m = float('inf')
 
 for a1 in range(15, 85):
-    for a2 in range(a1+1, 85):
+    for a2 in range(a1, 85):
         if all(f(x, a1, a2) == 1 for x in range(10, 6000)):
             if m > a2 - a1:
                 m = a2 - a1
@@ -18,3 +18,5 @@ for a1 in range(15, 85):
 
 print(start, end)
 print(m)
+
+print('answer: ', 29 - start)

@@ -5,6 +5,7 @@ def f(x, a, p, q):
 p = set(range(1, 4+1))
 q = set(range(1, 6+1))
 
+
 a = set()
 
 for x in range(1, 10000):

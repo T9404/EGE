@@ -8,9 +8,9 @@ def f(x, a1, a2):
 
 m = float('inf')
 
-for a1 in range(15, 53):
-    for a2 in range(a1+1, 53):
-        if all(f(x, a1, a2) == 1 for x in range(100, 6000)):
+for a1 in range(1, 100):
+    for a2 in range(a1, 100):
+        if all(f(x, a1, a2) == 1 for x in range(1, 100)):
             if m > a2 - a1:
                 m = a2-a1
                 start = a1
