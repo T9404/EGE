@@ -13,13 +13,16 @@ https://ege-study.ru/ru/ege/materialy/informatika/zadacha-16-razbor-razlichnyx-t
 
 '''
 
+
 #3 Нахождение суммы цифр числа
 # summa = sum(map(int, str(input())))
+
 
 
 #4 Что такое длина отрезка и количество точек в нем?
 # Длина: конец-начало
 # Количество: конец-начало+1
+
 
 
 #5 В чем разница между: "=" И "=="
