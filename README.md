@@ -23,11 +23,7 @@
 
 + https://www.youtube.com/channel/UC5A3HZVC0QeHhY5idc8Et5A ботаем вместе с Лёней 
 
-+ https://www.youtube.com/channel/UC0f-GuGlcxH5IhkHLvo_CwA  ФЛЭШ-эксель
-
-+ https://www.youtube.com/channel/UCtGc4H_x9XkBvSooIwOoYWw АР из Школково 
-
-+ https://www.youtube.com/c/IRONPROGRAMMER C# - ЕГЭ и не только
++ https://gist.github.com/cutefluffyfox/63587048cb4f3ab48e6287c3547b7d5c годнота от Лисы
 
 + https://github.com/tanookki/FizMatInf - материалы по подготовке к предметам
 
