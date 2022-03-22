@@ -22,9 +22,7 @@ int main()
                 {
                     string p = {s[i1], s[i2], s[i3], s[i4]};
                     if (check(p))
-                    {
                         c++;
-                    }
                 }
     cout << c;
 }
