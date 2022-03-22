@@ -14,7 +14,6 @@ bool check(string s)
 int main()
 {
     int c = 0;
-    set<string> a;
     string s = "VAIFU";
     for (int i1 = 0; i1 < 5; i1++)
         for (int i2 = 0; i2 < 5; i2++)
@@ -25,8 +24,7 @@ int main()
                     if (check(p))
                     {
                         c++;
-                        a.insert(p);
                     }
                 }
-    cout << c << " " << a.size();
+    cout << c;
 }
