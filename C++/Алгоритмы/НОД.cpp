@@ -1,6 +1,7 @@
 #include <iostream>
+using namespace std;
 
-int GCD(int a, int b) {
+int GCD(int a, int b) { //способ 1
 
     while ((a != 0) && (b != 0))
     {
@@ -12,9 +13,18 @@ int GCD(int a, int b) {
 
     return (a + b);
 }
-
+int gcd(int a, int b) // способ 2
+{
+    while (b)
+    {
+        a %= b;
+        swap(a, b);
+    }
+    return a;
+}
 int main() {
 
-    std::cout << GCD(15, 5);
+    cout << GCD(15, 5);
+    cout << gcd(15, 5);
     return 0;
 }
