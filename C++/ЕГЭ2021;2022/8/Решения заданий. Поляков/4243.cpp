@@ -9,6 +9,7 @@ bool check(string s)
     for (auto &i : s)
         c.insert(i);
     return (c.size() == s.size() && s[0] != 'I' && s.find("VF") == npos && s.find("FV") == npos);
+    // s.find("VF") == npos обозначает, что VF в строке s не найдена
 }
 
 int main()
