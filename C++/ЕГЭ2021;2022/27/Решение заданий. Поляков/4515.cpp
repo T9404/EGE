@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 bool check(int x)
 {
     for (int j = 2; j <= x / 2; j++)
@@ -13,9 +12,9 @@ bool check(int x)
         if (x % j == 0)
             return false;
     }
+
     return true;
 }
-
 
 int main()
 {
@@ -43,7 +42,6 @@ int main()
 
         prefix[k % 9] = min(prefix[k % 9], s);
     }
-
 
     cout << ans;
 
