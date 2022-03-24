@@ -8,12 +8,8 @@ int main(){ //способ 1 - со сплитами
     f.open("2420.txt");
     string s;
     f>>s;
-    while(s.find('C')!=npos or s.find('D')!=npos){
-        if(s.find('C')!=npos)
-            s.replace(s.find('C'), 1, " ");
-        if(s.find('D')!=npos)
-            s.replace(s.find('D'), 1, " ");
-    } // убираем ненужные символы
+    replace(s.begin(), s.end(), 'C', ' ');
+    replace(s.begin(), s.end(), 'D', ' '); // убираем ненужные символы
     istringstream iss(s);
     vector<string> res(istream_iterator<string>{iss}, istream_iterator<string>()); //разбиваем по пробелам
     //если есть необходимость разбивать не по пробелам, 
