@@ -20,7 +20,7 @@ int main()
         auto rf = dels(i);
         if (rf.size())
         {
-            int sr = (1.0 * accumulate(rf.begin(), rf.end(), 0) / rf.size());
+            int sr = accumulate(rf.begin(), rf.end(), 0) / rf.size();
             if (sr % 31 == 13)
                 vec.push_back({i, sr});
         }
