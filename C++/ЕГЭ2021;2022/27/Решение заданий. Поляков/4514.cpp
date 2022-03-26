@@ -4,7 +4,8 @@
 #include <algorithm>
 using namespace std;
 
-int main() {
+int main()
+{
 	int n;
 	int s = 0;
 	int k = 0;
@@ -19,14 +20,16 @@ int main() {
 		int x;
 		f >> x;
 		s += x;
+
 		if (x % 2 != 0)
 			k++;
+
 		if (k % 13 == 0)
 		{
 			answer = s;
-
 		}
-		else if (arr[k % 13] != 0) {
+		else if (arr[k % 13] != 0)
+		{
 			answer = max(answer, s - arr[k % 13]);
 		}
 
@@ -34,7 +37,6 @@ int main() {
 	}
 
 	cout << answer;
-
 
 	return 0;
 }

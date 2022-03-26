@@ -1,18 +1,17 @@
-
-// Для файла под буквой А
-// Если подождать минуту, то станет и для файла под Б
-
 #include <iostream>
 #include <fstream>
 #include <vector>
 using namespace std;
 
+// без динамики
+
 int main()
 {
 	int kol_ch, a, min_pr = 100000000;
 	ifstream f("27-A.txt");
-	vector <int> v;
+	vector<int> v;
 	f >> kol_ch;
+
 	for (int i = 0; i < kol_ch; i++)
 	{
 		f >> a;
@@ -25,17 +24,20 @@ int main()
 		{
 			if (v[g] % 2 == 1 && v[j] % 2 == 1)
 			{
-				if (v[g] * v[j] < min_pr) min_pr = v[g] * v[j];
+				if (v[g] * v[j] < min_pr)
+					min_pr = v[g] * v[j];
 			}
-			else continue;
+			else
+				continue;
 		}
-
 	}
 
 	f.close();
 
-	if (min_pr != 100000000) cout << min_pr;
-	else cout << -1;
+	if (min_pr != 100000000)
+		cout << min_pr;
+	else
+		cout << -1;
 
 	return 0;
 }
