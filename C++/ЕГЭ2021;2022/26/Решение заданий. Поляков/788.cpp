@@ -17,7 +17,7 @@ pair<int, int> func(int maxsize, vector<int> &a)
     }
     for (int i = a.size() - 1; i >= 0; i--)
     {
-        if (sum + a[i] < maxsize)
+        if (sum + a[i] <= maxsize)
         {
             return {ind, a[i]};
         }
