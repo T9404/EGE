@@ -8,9 +8,8 @@ int main()
     f >> n >> m;
     vector<int> img, vid;
     int x;
-    while (n--)
+    while (f >> x)
     {
-        f >> x;
         if (x <= 100)
             img.push_back(x);
         else
