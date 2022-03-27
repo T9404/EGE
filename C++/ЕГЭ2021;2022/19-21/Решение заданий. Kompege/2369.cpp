@@ -30,7 +30,7 @@ string g(pair<pair<int, int>, int> h)
         else
         {
             vector<pair<pair<int, int>, int>> M = m(h);
-            
+
             if (any_of(M.begin(), M.end(), [](pair<pair<int, int>, int> p)
                        { return g(p) == "w"; }))
                 mp[h] = "p1";

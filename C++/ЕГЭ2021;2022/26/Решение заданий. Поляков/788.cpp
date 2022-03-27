@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 pair<int, int> func(int maxsize, vector<int> &a)
 {
     vector<int> pref(a.size() + 1);
     pref[1] = a[0];
+
     for (int i = 2; i <= a.size(); i++)
         pref[i] = pref[i - 1] + a[i - 1];
+
     int sum, ind;
+
     for (int i = 1; i <= a.size(); i++)
     {
         if (pref[i] > maxsize)
@@ -15,6 +19,7 @@ pair<int, int> func(int maxsize, vector<int> &a)
             break;
         }
     }
+
     for (int i = a.size() - 1; i >= 0; i--)
     {
         if (sum + a[i] <= maxsize)
@@ -23,14 +28,17 @@ pair<int, int> func(int maxsize, vector<int> &a)
         }
     }
 }
+
 int main()
 {
     fstream f;
     f.open("788.txt");
-    int d, e, n;
-    f >> d >> e >> n;
+
+    int d, e, n, x;
     vector<int> mi, bi;
-    int x;
+
+    f >> d >> e >> n;
+
     while (n--)
     {
         f >> x;

@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 string bin(int n)
 {
     string s = "";
@@ -11,6 +12,7 @@ string bin(int n)
     reverse(s.begin(), s.end());
     return s;
 }
+
 int ten(string s)
 {
     int res = 0;
@@ -18,6 +20,7 @@ int ten(string s)
         res += (s[i] - '0') * pow(2, s.size() - i - 1);
     return res;
 }
+
 int f(int n)
 {
     string s = bin(n);
@@ -26,6 +29,7 @@ int f(int n)
     s += (count(s.begin(), s.end(), '1') % 2 == 0) ? "0" : "1";
     return ten(s);
 }
+
 int main()
 {
     for (int i = 1; i < 1000; i++)

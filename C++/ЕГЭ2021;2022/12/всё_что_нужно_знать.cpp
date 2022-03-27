@@ -1,8 +1,9 @@
 ﻿#include <iostream>
 
-int main() {
+int main()
+{
 
-	std::string s = "1115";   // ( 111 -> 5 ) => 55
+	std::string s = "1115"; // ( 111 -> 5 ) => 55
 
 	while (s.find("111") != -1)
 	{
