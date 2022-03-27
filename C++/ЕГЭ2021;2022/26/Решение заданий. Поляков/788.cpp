@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 pair<int, int> func(int maxsize, vector<int> &a)
 {
     vector<int> pref(a.size() + 1);
@@ -17,23 +15,18 @@ pair<int, int> func(int maxsize, vector<int> &a)
             break;
         }
     }
-    int ost = maxsize - sum;
-    if (find(a.begin(), a.end(), ost) != a.end())
+    if (find(a.begin(), a.end(), maxsize - sum) != a.end())
     {
-        return {ind, ost};
+        return {ind, maxsize - sum};
     }
-    else
+    for (int i = a.size() - 1; i >= 0; i--)
     {
-        for (int i = a.size() - 1; i >= 0; i--)
+        if (sum + a[i] < maxsize)
         {
-            if (sum + a[i] < maxsize)
-            {
-                return {ind, a[i]};
-            }
+            return {ind, a[i]};
         }
     }
 }
-
 int main()
 {
     fstream f;
