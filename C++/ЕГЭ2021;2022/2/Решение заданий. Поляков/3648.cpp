@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
 
-
-
-int main() {
+int main()
+{
 
 	cout << "a b c d" << endl;
 	for (int a = 0; a <= 1; a++)
@@ -12,6 +11,6 @@ int main() {
 				for (int d = 0; d <= 1; d++)
 					if ((a <= d) & (!(b <= c)))
 						cout << a << " " << b << " " << c << " " << d << endl;
-	
+
 	return 0;
 }

@@ -22,7 +22,7 @@ int f(int x)
 
 	for (int j = 0; j < div.size(); j++)
 	{
-		if ((div[j] % 10 == 8) and (div[j] != 8) and (div[j] != x))
+		if ((div[j] % 10 == 8) && (div[j] != 8) && (div[j] != x))
 		{
 			mina = min(div[j], mina);
 		}
