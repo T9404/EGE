@@ -1,4 +1,4 @@
-f = open('27-93b.txt')
+f = open('27-93.txt')
 n, k = map(int, f.readline().split())
 
 
