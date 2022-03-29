@@ -9,32 +9,26 @@ def move(e):
 
     h, l, s, flag = sorted(e[:-3]), e[-3], e[-2], e[-1]
 
-    new_h = []
+    new_step = []
 
-    if flag: # если начало битвы
+    if flag: 
+        # убираем карту s, с которой начинаем битву
+        m = tuple(h[h.index(s)+1:])
+        new_step.append((*m, l, s, False))
 
-        m = tuple(h[h.index(l)+1:])
-        new_h.append((*m, l, s, False))
-
-        return new_h # убираем карту l, с которой начали битву
-
-    else: 
-
-        # значение карт может повторяться. убираем лишнее
+    else:
+        # значение карт может повторяться. обходим дубликаты
         uniq_cards = set()
 
         for i in range(len(h)):
-
             # выбираем карту, которая подходит под условие
-            if ((l+1 == h[i]) or (l == h[i])) and (h[i] not in uniq_cards): 
+            if ((l+1 == h[i]) or (l == h[i])) and (h[i] not in uniq_cards):
 
-                m = tuple(h[h.index(h[i])+1:])
-                uniq_cards.add(h[i])
-                new_h.append((*m, h[i], s, flag))
-                
-        return new_h
+                m = tuple(h[h.index(h[i])+1:])  # обрезаем карту и всё до неё
+                uniq_cards.add(h[i])  # сохраняем использованную карту
+                new_step.append((*m, h[i], s, flag))
 
-
+    return new_step
 
 
 @lru_cache(None)
@@ -43,7 +37,7 @@ def f(h):
 
     new = lambda *values: (f(m) in values for m in move(h))
 
-    # список карт пуст, остались (l, s, flag) =>
+    # список карт пуст, остались l, s, flag =>
     if len(h) == 3:
         return 'W'
 
@@ -80,15 +74,11 @@ def f(h):
     elif all(new('P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8')):
         return 'V8'
 
-
-
-
+    
 cards_19 = (7, 8, 8, 8, 9, 9)
 
 arr19 = [i for i in set(cards_19) if f((*cards_19, i, i, True))[0] == 'P']
 print(*arr19)
-
-
 
 
 cards_20 = (5, 6, 6, 7, 7, 7, 8, 9, 9, 9, 10, 10)
@@ -97,17 +87,15 @@ arr20 = [i for i in set(cards_20) if f((*cards_20, i, i, True))[0] == 'P']
 print(min(arr20), max(arr20))
 
 
-
-
 # массив с картами набора
-cards_21 = [[i]*4 for i in range(4, 7+1)] 
+cards_21 = [[i]*4 for i in range(4, 7+1)]
 answer_21 = 0
 
 for i, j, m, u in product(range(4), repeat=4):
 
     q = tuple(cards_21[0][:i+1] + cards_21[1][:j+1] + cards_21[2][:m+1] + cards_21[3][:u+1])
 
-    if len(set(q)) == 4 and all(f((*q, i, i, True))[0] == 'V' for i in range(4, 7+1)): 
+    if len(set(q)) == 4 and all(f((*q, i, i, True))[0] == 'V' for i in range(4, 7+1)):
         answer_21 += 1
-
+      
 print(answer_21)
