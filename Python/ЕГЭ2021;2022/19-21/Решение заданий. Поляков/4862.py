@@ -43,7 +43,7 @@ def f(h):
 
     new = lambda *values: (f(m) in values for m in move(h))
 
-    # список карт пуст, остались l, s, flag =>
+    # список карт пуст, остались (l, s, flag) =>
     if len(h) == 3:
         return 'W'
 
@@ -107,7 +107,7 @@ for i, j, m, u in product(range(4), repeat=4):
 
     q = tuple(cards_21[0][:i+1] + cards_21[1][:j+1] + cards_21[2][:m+1] + cards_21[3][:u+1])
 
-    if all(f((*q, i, i, True))[0] == 'V' for i in range(4, 7+1)): 
+    if len(set(q)) == 4 and all(f((*q, i, i, True))[0] == 'V' for i in range(4, 7+1)): 
         answer_21 += 1
 
 print(answer_21)
