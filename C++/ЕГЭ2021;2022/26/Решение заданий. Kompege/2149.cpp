@@ -55,7 +55,7 @@ int main()
         if (mpr[i] > m)
         {
             count += (i - 1);
-            sumimg = mpr[i - 1];
+            sumimg = mpr[i - 2];
             break;
         }
     }
