@@ -269,3 +269,17 @@ print(new_array) # [1, 2, 3, 4, 1, 2, 3, 4, 1, 2]
 flag = True if 1 == 1 else False 
 
 print(flag) # True
+
+
+
+
+
+
+
+
+# 20 Быстрый перевод элементов массива в число
+
+d = [1, 2, 3, 4, 5]
+x = int(''.join(map(str, d)))
+
+print(x) # 12345
