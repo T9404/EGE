@@ -1,5 +1,6 @@
 x = 9 ** 81 + 27 ** 729 - 4
 
+
 x_9 = []
 
 while x:
@@ -7,10 +8,5 @@ while x:
     x //= 9
 
 
-answer, mak = max(x_9), 0
-
-for i in x_9:
-    if (i == mak) or (i == 0):
-        answer += 1
-
-print(answer)
+ans = [i for i in x_9 if ((i == 0) or (i == max(x_9)))]
+print(len(ans))
