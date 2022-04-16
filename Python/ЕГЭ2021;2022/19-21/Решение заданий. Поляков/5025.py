@@ -1,11 +1,9 @@
 def move(e):
     h, b = e
-
     stones = []
-
+    
     if b == 0:
         stones.append((h, 1))
-
     stones.append((h+2, b))
     stones.append((h*2, b))
 
@@ -14,7 +12,6 @@ def move(e):
 
 def f(h):
     a, b = h
-
     if a >= 20:
         return 'WIN'
 
@@ -39,13 +36,12 @@ def f(h):
 
 def f_19_task(h):
     a, b = h
-
     if a >= 20:
         return 'WIN'
-
+    
     elif any(f(m) == 'WIN' for m in move(h)):
         return 'P1'
-
+    
     elif any(f(m) == 'P1' for m in move(h)):
         return 'V1'
 
