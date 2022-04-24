@@ -4,14 +4,19 @@ numbers = [i for i in range(1, 15)]
 years = [int('20'+f'{i}'+f'{j}') for i in range(0, 2+1) for j in range(0, 9+1)]
 
 
+
 '''
 1) Дополнительные фишки питона, которые могут быть полезными
 https://pavel-karateev.gitbook.io/intermediate-python/funkcionalnoe-programmirovanie/lambdas
 
-2) Системы СС и о них
+
+
+2) Системы счисления
 https://ege-study.ru/ru/ege/materialy/informatika/zadacha-16-razbor-razlichnyx-tipov-zadach/
 
 '''
+
+
 
 
 # 3 Нахождение суммы цифр числа
@@ -19,9 +24,11 @@ https://ege-study.ru/ru/ege/materialy/informatika/zadacha-16-razbor-razlichnyx-t
 
 
 
+
 # 4 Что такое длина отрезка и количество точек в нем?
 # Длина: конец-начало
 # Количество: конец-начало+1
+
 
 
 
@@ -32,8 +39,8 @@ a = 5
 if (a == 5):
     print('ВЕРНО')
 
-
-
+    
+    
 
 # 6 Find в python
 
@@ -49,18 +56,20 @@ print('gcGC'.find(dr)) # вывел -1, т.к. строка состоит не 
 
 
 
+
 # 7 Count в python
 
 string = '88005553535прощепозвонитьчемукого-тозанимать'
-print(string.count('0')) # вернет 2, т.к. два нуля в строке. Лучше не играть с этим в 24 задании в подстроках, т.к. теряет. он проходит через строку, а не через элемент
+print(string.count('0')) # вернет 2, т.к. два нуля в строке. Лучше не играть с этим в 24 задании
 print(string.count('5')) # вернет 5
+
 
 
 
 
 # 8 Проверка на простоту
 
-if all(1231 % j!=0 for j in range(2, int(1231**0.5)+1)):
+if all(1231 % j != 0 for j in range(2, int(1231**0.5)+1)):
     print('Простое')
 
 def f(x):
@@ -68,9 +77,8 @@ def f(x):
         if x % i == 0:
             return 'Составное'
     return 'Простое'
+
 print(f(1232))
-
-
 
 
 
@@ -79,9 +87,7 @@ print(f(1232))
 # 9 Сортировка в питоне
 
 list_new = [ 2, 213, 41, 414, 1, 1999, 10000, 1, 2, 1]
-print(sorted(list_new, key=lambda x: x%2 ))
-
-
+print(sorted(list_new, key=lambda x: x % 2 ))
 
 
 def elem_sort(i):
@@ -104,10 +110,8 @@ https://proproprogs.ru/python_base/sortirovka-sort-i-sorted
 
 
 
-
 # 10 Использование yield
 
-print('>>>>>Фибоначчи')
 def number_range(n): # алгоритм для чисел Фибоначчи
     a, b = 1, 1
     for i in range(n):
@@ -119,8 +123,6 @@ print(data[-1])
 '''
 https://all-python.ru/osnovy/yield.html
 '''
-
-
 
 
 
@@ -164,8 +166,6 @@ print(a_new) #посмотрите что вернуло
 
 
 
-
-
 # 13 Работа со словарями:
 
 sl = {}
@@ -177,8 +177,6 @@ sl.pop(121)
 
 for key, value in sl.items():
     print(key, value)
-
-
 
 
 
@@ -207,7 +205,6 @@ print(up_nums) # [111, 213, 515]
 
 
 
-
 # 15 Зачем нужен zip?
 
 # zip возвращает итератор с кортежами, в котором n-ый кортеж состоит из n-ых элементов последовательностей, которые были переданы как аргументы
@@ -216,6 +213,7 @@ d_value = ['пока', 'Пихто']
 d_dict = dict(zip(d_key, d_value))
 
 print(d_dict) # {'всем привет': 'пока', 'ты кто': 'Пихто'}
+
 
 
 
@@ -234,14 +232,12 @@ print(int('13741'), 8)
 
 
 
-
 # 17 Использование map
 
 num_1, num_2 = map(int, f.readline().split()) # разделить с помощью пробелов + сделать тип int
 
 arr = [1, 2, 3, 4, 5]
 new_arr = list(map(lambda x: x + 1 , arr)) # [2, 3, 4, 5, 6]
-
 
 
 
@@ -263,13 +259,11 @@ print(new_array) # [1, 2, 3, 4, 1, 2, 3, 4, 1, 2]
 
 
 
-
 # 19 Переменные по условию
 
 flag = True if 1 == 1 else False 
 
 print(flag) # True
-
 
 
 
@@ -283,3 +277,17 @@ d = [1, 2, 3, 4, 5]
 x = int(''.join(map(str, d)))
 
 print(x) # 12345
+
+
+
+
+
+
+
+# 21 Удаление незначащих нулей
+
+x = (16 ** 44) * (16 ** 30) - ((32**5) * ((8 ** 40) - (8**32)) * ((16 ** 17) - (32 ** 4)))
+x_16 = hex(x)[2:]
+
+x_16 = x_16.replace('f', '0') # 00000000000000000000e00000200000100000e00000000000000000000000000000000000
+x_16 = x_16.lstrip('0')       # e00000200000100000e00000000000000000000000000000000000
