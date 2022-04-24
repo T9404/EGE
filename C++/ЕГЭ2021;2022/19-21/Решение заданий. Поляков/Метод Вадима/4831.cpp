@@ -32,8 +32,10 @@ string g(pii p){
     } return mp[p];
 }
 int main(){
-    for(int s=1; s<=139; s++){
-        if(g({s, 0})=="v2")
-        cout << s << " " << g({s, 0}) << "\n";
+    for(int s=1; s<=139; s++){ 
+        //if(g{s, 0}=="v1") cout << s << " " << g({s, 0}) << "\n"; //№19
+        //if(g({s, 0})=="p2") cout << s << " " << g({s, 0}) << "\n"; //№20
+        //if(g({s, 0})=="v2") cout << s << " " << g({s, 0}) << "\n"; //№21
+        
     }
 }
