@@ -23,7 +23,7 @@
 
 + https://www.youtube.com/channel/UC5A3HZVC0QeHhY5idc8Et5A ботаем вместе с Лёней 
 
-+ https://gist.github.com/cutefluffyfox/63587048cb4f3ab48e6287c3547b7d5c годнота от Лисы
++ https://gist.github.com/cutefluffyfox годнота от Фырки
 
 + https://github.com/tanookki/FizMatInf - материалы по подготовке к предметам
 
