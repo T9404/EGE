@@ -4,8 +4,6 @@
 #define sum(a) accumulate(a.begin(), a.end(), 0)
 using namespace std;
 
-//+1 +3 *2
-// 1  2  3
 int f(int s, int p, int c, int m){
     if(s>=55) return c%2==m%2;
     if(c==m) return 0;
@@ -28,3 +26,5 @@ int main(){
         }
     }
 }
+//+1 +3 *2
+// 1  2  3
