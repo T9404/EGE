@@ -21,7 +21,6 @@ for i in range(1, len(a)):
     if max(a[i-1], a[i]) > m17:
         bools = [f7(a[i-1]), f7(a[i])]
         if (True in bools):
-
             k += 1
             m = min(m, a[i]+a[i-1])
 
