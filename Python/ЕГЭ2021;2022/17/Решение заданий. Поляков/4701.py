@@ -5,12 +5,12 @@ a = [int(x) for x in f.readlines()]
 
 def f7(x):  # 2 условие
     x_7 = ''
-
+    
     while x:
         x_7 += str(x % 7)
         x //= 7
-
     x_7 = x_7[::-1]
+    
     return ('36' in x_7)
 
 
