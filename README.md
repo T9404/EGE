@@ -38,6 +38,7 @@
     https://www.javatpoint.com/ ---------->(Всё)
     https://www.geeksforgeeks.org/ --->(Всё)
     https://goalkicker.com/ ---------->(Всё)
+    https://stepik.org/catalog ----->(Всё)
     https://pythontutor.ru/ ----->(Python)
     https://ulearn.me/ -------->(C#)
 
