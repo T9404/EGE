@@ -35,12 +35,13 @@
 
 ### 👅 Изучение языков программирования:
 
-    https://www.javatpoint.com/ ---------->(Всё)
-    https://www.geeksforgeeks.org/ --->(Всё)
+    https://www.javatpoint.com/ ----- -->(Всё)
+    https://www.geeksforgeeks.org/ - -->(Всё)
     https://goalkicker.com/ ---------->(Всё)
-    https://stepik.org/catalog ----->(Всё)
-    https://pythontutor.ru/ ----->(Python)
-    https://ulearn.me/ -------->(C#)
+    https://stepik.org/catalog ------>(Всё)
+    https://en.cppreference.com/w/ ->(C++)
+    https://pythontutor.ru/ ---->(Python)
+    https://ulearn.me/ ------------>(C#)
 
 ---
 
