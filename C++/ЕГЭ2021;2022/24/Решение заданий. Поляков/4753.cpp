@@ -15,5 +15,5 @@ int main(){
     for(auto&s:sub){
         if(count(s.begin(), s.end(), '.')>=6) res=max(res, int(s.size())); 
     }
-    cout << res;
+
 }
