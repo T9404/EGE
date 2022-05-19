@@ -29,6 +29,8 @@
 
 + https://www.youtube.com/user/tkhirianov  - алгоритмы для общего развития
 
++ https://ru.algorithmica.org/ - ещё немного алгоритмов 
+
 + https://www.codewars.com/ - интересные задачи
 
 ---
