@@ -157,7 +157,7 @@ print(a) # {1, 2, 3}
 a_new = {i for i in [9, 8, 9, 8, 7]}
 
 print(a_new) #посмотрите что вернуло
-# add, remove, pop, discard(удаление, даже если не сущ элемента)
+# add, remove, pop, discard
 # читайте документацию
 
 
