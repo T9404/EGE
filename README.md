@@ -25,13 +25,15 @@
 
 + https://gist.github.com/cutefluffyfox годнота от Фырки
 
-+ https://github.com/tanookki/FizMatInf - материалы по подготовке к предметам
++ https://github.com/tanookki/FizMatInf  материалы по подготовке к предметам
 
-+ https://www.youtube.com/user/tkhirianov  - алгоритмы для общего развития
++ https://www.youtube.com/user/tkhirianov  алгоритмы для общего развития
 
-+ https://ru.algorithmica.org/ - ещё немного алгоритмов 
++ https://ru.algorithmica.org/ ещё немного алгоритмов 
 
-+ https://www.codewars.com/ - интересные задачи
++ https://leetcode.com/problemset/all/ эффективно обучайся
+
++ https://www.codewars.com/ интересные и полезные задачи
 
 ---
 
