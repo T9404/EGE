@@ -31,7 +31,7 @@
 
 + https://ru.algorithmica.org/ ещё немного алгоритмов 
 
-+ https://leetcode.com/problemset/all/ эффективно обучайся
++ https://leetcode.com/problemset/all/ обучайся эффективно
 
 + https://www.codewars.com/ интересные и полезные задачи
 
