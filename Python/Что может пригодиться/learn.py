@@ -1,8 +1,10 @@
 # 0 Использование генераторов списков
 
 numbers = [i for i in range(1, 15)]
+
 years = [int('20'+f'{i}'+f'{j}') for i in range(0, 2+1) for j in range(0, 9+1)]
 
+gene = [x if x in 'qw' else '*' for x in 'qwee'] # ['q', 'w', '*', '*']
 
 
 '''
