@@ -24,6 +24,7 @@ def f(x):
 
 d = []
 
+
 for i in range(299_999_999, 2, -1):
     if f(i) != 0:
         d.append(f(i))

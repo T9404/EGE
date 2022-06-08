@@ -17,7 +17,7 @@ c = 0
 
 for i in range(550_001, 10 ** 965):
     f = calc_f(i)
-
+    
     if f != 0 and f % 31 == 13:
         print(i, f)
         c += 1

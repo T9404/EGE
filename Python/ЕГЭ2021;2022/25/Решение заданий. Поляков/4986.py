@@ -12,33 +12,38 @@
 '''
 
 
-
 from collections import defaultdict
- 
-#произведение цифр числа
+
+# произведение цифр числа
+
+
 def product(n):
     p = 1
     for y in n:
         if int(y):
             p *= int(y)
     return p
- 
-#проверка на простоту
+
+# проверка на простоту
+
+
 def prime(n):
     n = int(n)
     for d in range(2, int(n**0.5) + 1):
-        if n%d == 0:
+        if n % d == 0:
             return 0
     return 1
- 
-ps = defaultdict(list) #храним все простые палиндромы
-nechet = '13579' #наборы цифр для позиций
-digits = '0123456789' #все цифры
- 
-#Формирование палиндромов по логическому паттерну
+
+
+ps = defaultdict(list)  # храним все простые палиндромы
+nechet = '13579'  # наборы цифр для позиций
+digits = '0123456789'  # все цифры
+
+# Формирование палиндромов по логическому паттерну
 for a in nechet:
     for b in digits:
-        p = a+b+a #Например, паттерн трёхзначки = xyx (121, 131, 525, 727 и т.д.)
+        # Например, паттерн трёхзначки = xyx (121, 131, 525, 727 и т.д.)
+        p = a+b+a
         if prime(p):
             ps[product(p)] += [int(p)]
         p = a+b+b+a
@@ -65,6 +70,6 @@ for a in nechet:
                     p = a+b+c+d+e+e+d+c+b+a
                     if prime(p):
                         ps[product(p)] += [int(p)]
- 
-#Выводим результирующую группу                    
-print(*((sorted(max(ps.values(), key = len))[::-1])[:5])[::-1], sep = '\n')
+
+# Выводим результирующую группу
+print(*((sorted(max(ps.values(), key=len))[::-1])[:5])[::-1], sep='\n')

@@ -26,7 +26,6 @@ a = set()
 
 for i, j, m, n in product('0123456789 ', repeat=4):
     x = int(('3' + i + '458' + j + m + n + '3').replace(' ', ''))
-
     if x <= 10**9 and sys_numb(x):
         a.add(sys_numb(x))
 

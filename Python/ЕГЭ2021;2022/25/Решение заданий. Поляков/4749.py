@@ -19,13 +19,14 @@ def check(a):
 
 
 i, k = 10_000_000, 0
+
+
 while k < 5:
     i += 1
-
     s = f(i)
+
     if s:
         d = list(str(s))
-        
         if check(d):
             k += 1
             print(s)

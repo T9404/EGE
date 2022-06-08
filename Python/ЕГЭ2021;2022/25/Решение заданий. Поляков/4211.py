@@ -1,8 +1,5 @@
 def isPrime(n):
-    for d in range(2, int(n ** 0.5) + 1):
-        if n % d == 0:
-            return False
-    return True
+    return all(n % i != 0 for i in range(2, int(n**0.5)+1))
 
 
 def calc_s(n):
@@ -30,5 +27,5 @@ for i in range(912_671, 1, -2):
         print(i, s)
         c += 1
         
-        if c == 5:
-            break
+    if c == 5:
+        break
