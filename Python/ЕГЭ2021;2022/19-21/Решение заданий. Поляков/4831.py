@@ -2,16 +2,13 @@ from functools import lru_cache
 
 
 def move(e):
-    new_h = []
-
     h, l = e  # h - heap(куча), l - last(последний) ход противника
+    new_h = []
 
     if l != 1:
         new_h += [(h+1, 1)]
-
     if l != 2:
         new_h += [(h+2, 2)]
-
     if l != 3:
         new_h += [(h*3, 3)]
 
@@ -34,9 +31,8 @@ def f(e):
 
 
 ans_19 = [i for i in range(1, 139+1) if f((i, -1)) == 'B1']
-ans_20 = [i for i in range(1, 139+1) if f((i, -1)) == 'P2']
-ans_21 = [i for i in range(1, 139+1) if f((i, -1)) == 'B2']
-
 print(*ans_19)
+ans_20 = [i for i in range(1, 139+1) if f((i, -1)) == 'P2']
 print(min(ans_20), max(ans_20))
+ans_21 = [i for i in range(1, 139+1) if f((i, -1)) == 'B2']
 print(*ans_21)

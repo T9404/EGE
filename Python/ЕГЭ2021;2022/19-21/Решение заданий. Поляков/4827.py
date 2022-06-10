@@ -3,15 +3,12 @@ from functools import lru_cache
 
 def move(h):
     a, b = h
-
     k = []
 
     if (b != 1):
         k.append((a+1, 1))
-
     if (b != 3):
         k.append((a+3, 3))
-
     if (b != 2):
         k.append((a*2, 2))
 
