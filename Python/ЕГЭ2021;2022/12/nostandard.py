@@ -25,14 +25,15 @@ def kweng(a, b):
     left = left - 5
     right = right + 15
 
-    for i in range(0, 4):
+    for _ in range(0, 4):
         left += 5
         right += 1
-        left += (a)
-        right += (b)
+        left += a
+        right += b
+        
     left += 90
     right += 4
-    
+
     if left == 5 and right == 3:
         return True
     return False
@@ -42,6 +43,7 @@ for a in range(-100, 100):
     for b in range(-100, 100):
         if kweng(a, b):
             print(a, b)
+
 
 # Данной задачи уже нет на сайте К.Ю.Полякова
 # Переменные left, right - моя фантазия
