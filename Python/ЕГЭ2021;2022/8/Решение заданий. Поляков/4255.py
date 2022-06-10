@@ -1,17 +1,11 @@
-# 1 решение
+'''
+Мила составляет 4-значные числа в 8-ичной системе. Сколько различных чисел, 
+делящихся на 4 без остатка, может составить Мила?
+'''
+# https://prnt.sc/jAHyxTcLBmLb
 
-start = int('1000', 8)
-stop = int('10000', 8)
 
-a = [i for i in range(start, stop) if (i % 4 == 0 and len(oct(i)[2:]) == 4)]
+a = [i for i in range(int('1000', 8), int('10000', 8))
+     if (i % 4 == 0 and len(oct(i)[2:]) == 4)]
+     
 print(len(a))
-
-# 2 решение
-
-k = 0
-
-for i in range(1, 10000):
-    if i % 4 == 0 and (len(str(oct(i))[2:]) == 4):
-        k += 1
-        
-print(k)

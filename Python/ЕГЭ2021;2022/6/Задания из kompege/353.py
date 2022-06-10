@@ -1,4 +1,13 @@
-s = []
+"""
+Найдите сумму максимального и минимального значений d, 
+при которых программы выводит число 46. Для Вашего удобства 
+программа представлена на пяти языках программирования.
+"""
+# https://prnt.sc/DzyyC-9RxXKm
+
+
+trash = []
+
 
 for i in range(1, 10000):
     d = i
@@ -7,8 +16,9 @@ for i in range(1, 10000):
     while d // n > 0:
         d -= 2
         n += 3
-        
-    if n == 46:
-        s.append(i)
 
-print(min(s)+max(s))
+    if n == 46:
+        trash.append(i)
+
+
+print(min(trash) + max(trash))

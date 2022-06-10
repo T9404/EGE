@@ -1,19 +1,22 @@
+'''
+Сколько существует чисел, шестнадцатеричная запись которых 
+содержит 3 цифры, причём все цифры различны и никакие 
+две чётные и две нечётные цифры не стоят рядом.
+'''
+# https://prnt.sc/sw7DZj9oUF1b
+
+
 from itertools import *
 
 
-def F(n):
-    for i in range(len(n)-1):
-        if (n[i] % 2 == n[i+1] % 2):
-            return False
-    else:
-        return True
+numbers = [''.join(i) for i in permutations(
+    '0123456789abcdef', r=3) if (i[0] != '0')]
 
 
-a = [x for x in range(16)]
-c = 0
+trash = [''.join(i) for i in product('02468ace', repeat=2)]
+trash += [''.join(i) for i in product('13579bdf', repeat=2)]
 
-for i in permutations(a, r=3):
-    if (i[0] != 0) and (F(i) == True):
-        c += 1
 
-print(c)
+answer = [numb for numb in numbers if all(comb not in numb for comb in trash)]
+
+print(len(answer))

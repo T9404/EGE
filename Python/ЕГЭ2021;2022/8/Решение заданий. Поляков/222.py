@@ -1,13 +1,27 @@
+'''
+Все 5-буквенные слова, составленные из букв А, З, Н, С, записаны в алфавитном 
+порядке и пронумерованы. Вот начало списка:
+1. ААААА
+2. ААААЗ
+3. ААААН
+4. ААААС
+5. АААЗА
+...
+Какое количество слов находятся между словами САЗАН и ЗАНАС (включая эти слова)?
+'''
+# https://prnt.sc/A7phLT6vsy_n
+
+
 from itertools import product
 
 
-count = 0
-c = []
+arr = []
 
-for x in product('АЗНС', repeat=5):
-    s = ''.join(x)
-    count += 1
-    if (s == 'САЗАН') or (s == 'ЗАНАС'):
-        c.append(count)
+for i, letter in enumerate(product('АЗНС', repeat=5), start=1):
+    word = ''.join(letter)
+    if (word == 'САЗАН') or (word == 'ЗАНАС'):
+        arr.append(i)
 
-print(c[1]-c[0]+1)
+
+# количество = длина + 1
+print(arr[1] - arr[0] + 1)

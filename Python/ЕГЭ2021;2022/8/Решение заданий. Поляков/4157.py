@@ -1,12 +1,19 @@
+'''
+Сколько существует четных пятеричных чисел длиной 6, начинающихся с цифры 3?
+'''
+# https://prnt.sc/myebKDZesfYu
+
+
 from itertools import product
 
 
-k = 0
+count = 0
+
 
 for i in product('01234', repeat=6):
-    w = ''.join(i)
-    if w[0] == '3':
-        if int(w, 5) % 2 == 0:
-            k += 1
+    number = ''.join(i)
+    if (number[0] == '3') and (int(number, 5) % 2 == 0):
+        count += 1
 
-print(k)
+
+print(count)

@@ -19,14 +19,14 @@ print('>>>>>')
 Сколько слов может составить Женя, если известно, 
 что Ь не может стоять на первом месте и после гласной? 
 '''
+
 amount = 0
 word = 'ЗАПИСЬ'
 
 for i in permutations(word, r=6):
-    s = ''.join(i)
-    if s[0] != 'Ь' and 'АЬ' not in s and 'ИЬ' not in s:
+    s = ''.join(i) 
+    if (s[0] != 'Ь') and ('АЬ' not in s) and ('ИЬ' not in s):
         amount += 1
-        # print(s)
 
 print(amount)
 
@@ -41,6 +41,7 @@ print('>>>>>>>')
 Каждая допустимая гласная буква может входить в код не более одного раза.
 Сколько кодов может составить Миша? 
 '''
+
 count = 0
 letter = 'БАЛОН'
 
@@ -69,11 +70,13 @@ print('>>>>>>')
 ...
 Найдите номер первого слова в этом списке, которое не содержит гласных и !одинаковых! - set букв. 
 '''
+
 write = 'АВДПР'  # В этом задании важен порядок кодировки символов, А-1, В-2, Д-3, П-4, Р-5
 
 for i, word_i in enumerate(product(write, repeat=4)):
     u = ''.join(word_i)
-    if len(set(u)) == 4 and 'А' not in u:
+
+    if (len(set(u)) == 4) and ('А' not in u):
         print(u, i+1)
         break
 
@@ -92,16 +95,14 @@ print('>>>>>>')
 '''
 
 
-def ok(x):
+def func(x):
     if x.count('С') == 1:
         return True
     else:
         return False
 
 
-s_waw = 'СЛОН'
-m = {x for x in product(s_waw, repeat=5) if ok(x)}
-
+m = {x for x in product('СЛОН', repeat=5) if func(x)}
 print(len(m))
 
 

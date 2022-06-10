@@ -1,18 +1,25 @@
-from itertools import *
+'''
+Определите количество шестизначных чисел в пятеричной системе счисления, 
+которые не оканчиваются цифрами 3 или 4 и не начинаются с цифры 1.
+'''
+# https://prnt.sc/aW69swzf3rIr
 
 
-def f(x):
-    if x[0] not in '01':
-        if x[-1] not in '34':
-            return True
-    return False
+from itertools import product
 
 
-k = 0
-for i in product('01234', repeat=6):  # 5ная С.С.!!
-    w = ''.join(i)
-    if f(w):
-        k += 1
+def func(let):
+    return (let[0] not in '01') and (let[-1] not in '34')
 
 
-print(k)
+amount = 0
+
+
+# пятеричная система счисления: 0, 1, 2, 3, 4
+for i in product('01234', repeat=6):
+    word = ''.join(i)
+    if func(word):
+        amount += 1
+
+
+print(amount)

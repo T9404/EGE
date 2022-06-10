@@ -3,10 +3,12 @@
 слова и рядом с гласной. Буквы могут повторяться. Сколько слов может составить человек?
 '''
 
+
+# Решение автора
+
 from itertools import *
 
 
-# Решение автора
 s = 'ПИТОНЯГА'
 
 permg = sorted(
@@ -17,15 +19,22 @@ s = sorted(set([x for x in map(lambda x: ''.join(x), product(s, repeat=8)) if al
 print(len(s))
 
 
+
+
+
 # Решение простого обывателя
-a = 'ПИТОНЯГА'
-k = 0
-la = list(set(map(''.join, list(product(a[1::2], repeat=2)))))
 
-for i in product(a, repeat=8):
+
+word = 'ПИТОНЯГА'
+condition = list(set(map(''.join, list(product(word[1::2], repeat=2)))))
+
+amount = 0
+
+
+for i in product(word, repeat=8):
     word = ''.join(i)
-    if word[0] not in a[1::2]:
-        if all(la_w not in word for la_w in la):
-            k += 1
+    if word[0] not in word[1::2] and all(part not in word for part in condition):
+        amount += 1
 
-print(k)
+
+print(amount)
