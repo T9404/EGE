@@ -1,4 +1,4 @@
-# В данном задании нет ничего сложного, нужно лишь переписать формулу :)
+# Внимательно расставьте скобки!
 
 '''
 Что нужно знать?
@@ -22,6 +22,7 @@ https://letpy.com/handbook/operator-priorities/
 
 
 from itertools import product
+
 
 # Длинный способ
 print('a b c d')
