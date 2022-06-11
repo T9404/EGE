@@ -1,13 +1,24 @@
-f = open('24-179.txt')
+'''
+Текстовый файл содержит строку из заглавных букв A, B, C, D, E, F, всего не более чем из 10^6 символов. 
+Определите, сколько встречается комбинаций вида CA*AC, где на месте "*" может стоять любая буква, 
+кроме A, B и F. В ответе укажите сначала заглавную латинскую букву, которая чаще всего встречается 
+на месте "*", затем общее количество подходящих комбинаций.
+'''
+# https://prnt.sc/334ONB2CJw-K
+
+
+f = open('24.txt')
 s = f.readline()
 
 
-k = 0
-a = [0]*26
+symbol = [0]*26
+count = 0
 
-for i in range(len(s)-4):
-    if s[i] == 'C' and s[i+1] == 'A' and s[i+2] not in ['A', 'B', 'F'] and s[i+3] == 'A' and s[i+4] == 'C':
-        k += 1
-        a[ord(s[i+2])-ord('A')] += 1
 
-print(chr(ord('A')+a.index(max(a))), k)
+for i in range(len(s) - 4):
+    if (s[i] == 'C') and (s[i+1] == 'A') and (s[i+2] not in ['A', 'B', 'F']) and (s[i+3] == 'A') and (s[i+4] == 'C'):
+        symbol[ord(s[i+2]) - ord('A')] += 1
+        count += 1
+
+
+print(chr(ord('A') + symbol.index(max(symbol))), count)

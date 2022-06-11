@@ -1,10 +1,23 @@
-def f(s, e):
-    if s > e:
+'''
+ Исполнитель Калькулятор преобразует число на экране. У исполнителя есть две команды, которым присвоены номера:
+
+1. Прибавить 2
+2. Прибавить сумму цифр
+
+Программа для исполнителя Калькулятор – это последовательность команд. Сколько существует программ, для 
+которых при исходном числе 3 результатом является число 68, и при этом траектория вычислений содержит число 29? 
+'''
+# https://prnt.sc/OYz1oNMNiy0x
+
+
+def func(start, end):
+    if (start > end):
         return 0
-    elif s == e:
+    elif (start == end):
         return 1
     else:
-        s_num = sum(map(int, str(s)))
-        return f(s+2, e)+f(s+s_num, e)
+        command_1 = sum(map(int, str(start)))
+        return func(start + 2, end) + func(start + command_1, end)
 
-print(f(3, 29)*f(29, 68))
+
+print(func(3, 29) * func(29, 68))

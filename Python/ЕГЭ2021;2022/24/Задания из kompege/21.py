@@ -1,19 +1,30 @@
+'''
+Демоверсия 2021
+Текстовый файл состоит не более чем из 106 символов X, Y и Z.  
+Определите максимальное количество идущих подряд символов, среди которых каждые два соседних различны. 
+Для выполнения этого задания следует написать программу. 
+'''
+# https://prnt.sc/HcL5eBNtmhWZ
+
+
 # (I) Решение
 
 f = open('24.txt')
 s = f.readline()
 
 
-k, mak = 1, 1
+count, max_string = 1, 1
+
 
 for i in range(1, len(s)):
     if s[i-1] != s[i]:
-        k += 1
+        count += 1
     else:
-        mak = max(mak, k)
-        k = 1
+        max_string = max(max_string, count)
+        count = 1
 
-print(mak)
+
+print(max_string)
 
 
 
@@ -29,5 +40,5 @@ while 'XX' in s or 'YY' in s or 'ZZ' in s:
     s = s.replace('ZZ', 'Z Z')
 
 
-L = len(max((i for i in s.split()), key=len))
-print(L)
+answer = len(max((i for i in s.split()), key=len))
+print(answer)

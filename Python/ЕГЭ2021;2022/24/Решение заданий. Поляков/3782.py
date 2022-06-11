@@ -1,32 +1,54 @@
-f = open('C:\\Users\\XiaoMai\\Downloads\\24-s1.txt')
+'''
+Текстовый файл 24-s1.txt состоит не более чем из 106 символов и содержит только заглавные 
+буквы латинского алфавита (ABC…Z). Текст разбит на строки различной длины. Необходимо найти 
+строку, содержащую наибольшее количество букв Q (если таких строк несколько, надо взять ту, 
+которая в файле встретилась позже). Определите, какая буква встречается в этой строке реже 
+всего (но присутствует!). Если таких букв несколько, надо взять ту, которая стоит раньше в 
+алфавите. Запишите в ответе эту букву, а затем – сколько раз она встречается во всем файле.
+Пример. Исходный файл:
+
+ZZQAQB
+QAVQAB
+BAQTUB
+
+В этом примере в первой и второй строках по две букву Q, в третьей – одна. Берём вторую строку, 
+т.к. она стоит в файле позже. В этой строке реже других встречаются буквы V и B (по одному разу), 
+выбираем букву B, т. к. она раньше стоит в алфавите. В ответе для этого примера надо записать B4, 
+так как во всех строках файла буква B встречается 4 раза.
+'''
+# https://prnt.sc/Wq3a137XES9P
 
 
-all_f, our_len = '', ''
+f = open('24.txt')
+
+
+full_line, our_strin = '', ''
 max_q = 0
 
 
 for s in f:
-    all_f += s
+    full_line += s
+
     if (s.count('Q') > max_q):
         max_q = s.count('Q')
-        our_len = s
+        our_strin = s
 
 
 min_count = float('inf')
-min_c = ''
+min_line = ''
 
 
-for a in range(ord('A'), ord('Z')+1):
-    q = chr(a)
-    c = 0
+for a in range(ord('A'), ord('Z') + 1):
+    element = chr(a)
+    count = 0
 
-    for i in range(len(our_len)):
-        if (our_len[i] == q):
-            c += 1
-            
-    if (c < min_count) and (c != 0):
-        min_c = q
-        min_count = c
+    for i in range(len(our_strin)):
+        if (our_strin[i] == element):
+            count += 1
+
+    if (count < min_count) and (count != 0):
+        min_line = element
+        min_count = count
 
 
-print(min_c, all_f.count(min_c))
+print(min_line, full_line.count(min_line))

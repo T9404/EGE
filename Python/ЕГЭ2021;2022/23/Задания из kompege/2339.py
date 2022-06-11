@@ -1,26 +1,46 @@
+'''
+Исполнитель Калькулятор преобразует число, записанное на экране в троичной системе счисления. 
+У исполнителя есть две команды, которым присвоены номера:
+
+1. Умножь на 2
+2. Умножь на 2 и прибавь 1
+
+Сколько различных результатов можно получить из исходного числа 1 после выполнения программы, 
+содержащей ровно 15 команд?
+'''
+# https://prnt.sc/tus6S7d16xfC
+
+
+
 # (I) Решение
 
-a = set()
+unique = set()
 
-def f(s, k):
-    if k == 15:
-        a.add(s)
-        return 1
+
+def func(start, count):
+    if count == 15:
+        unique.add(start)
+        return True
     else:
-        return f(s*2, k+1)+f(s*2+1, k+1)
+        return func(start * 2, count + 1) + func(start * 2 + 1, count + 1)
 
-f(1, 0)
-print(len(a))
+
+func(1, 0)
+print(len(unique))
+
 
 
 # (II) Решение
 
-d = [1]
+arr = [1]
 
-for _ in range(15): # 15 команд
-    for j in range(len(d)):
-        m = d.pop(0)
-        d.append(2 * m)
-        d.append(m * 2 + 1)
 
-print(len(d))
+# "содержащей ровно 15 команд"
+for _ in range(15): 
+    for j in range(len(arr)):
+        remaining = arr.pop(0)
+        arr.append(2 * remaining)
+        arr.append(remaining * 2 + 1)
+
+
+print(len(arr))

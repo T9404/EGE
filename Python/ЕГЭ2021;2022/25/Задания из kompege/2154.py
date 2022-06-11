@@ -1,25 +1,32 @@
+'''
+Среди чисел, принадлежащих отрезку: [5000000; 10000000], найти такие, которые могут 
+являться точками градусных мер π∙n (n - целое число) на окружности (например, точка 
+6π соответствует 1080 градусам на окружности), количество делителей которых более 400, 
+но менее 440. Вывести эти числа, справа от каждого вывести соответствующий ему 
+наибольший простой делитель.
+'''
+# https://prnt.sc/zw2X5DSLECVd
+
+
 def prime(x):
-    return all(x % i != 0 for i in range(2, int(x**0.5)+1))
+    return all(x % i != 0 for i in range(2, int(x ** 0.5) + 1))
 
 
 def f(x):
-    a = set()
+    dividers = set()
 
-    for i in range(2, int(x**0.5)+1):
+    for i in range(2, int(x ** 0.5) + 1):
         if x % i == 0:
-            a.add(i)
-            a.add(x//i)
-            
-    b = list(a)
-    b = [i for i in b if prime(i)]
+            dividers |= {i, x//i}
 
-    if 400 < len(a) < 440 and len(b) >= 1:
-        return max(b)
-    else:
-        return 0
+    dividers = sorted(dividers)
+    prime_dividers = [i for i in dividers if prime(i)]
+
+    if (400 < len(dividers) < 440) and (len(prime_dividers) >= 1):
+        return max(prime_dividers)
+    return 0
 
 
-for i in range(5000000, 10000000+1):
-    if i % 180 == 0:
-        if f(i):
-            print(i, f(i))
+for i in range(5000000, 10000000 + 1):
+    if i % 180 == 0 and f(i):
+        print(i, f(i))

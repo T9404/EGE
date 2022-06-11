@@ -1,19 +1,27 @@
-def F(n):
-    a = set()
+'''
+Рассматриваются возрастающие последовательности из 5 идущих подряд чисел, 
+больших 700000, такие, что количество делителей каждого следующего числа 
+превосходит количество делителей предыдущего числа. Найдите такую последовательность, 
+которая начинается с наименьшего возможного числа. Для каждого числа из этой 
+последовательности запишите сначала само число, а затем количество его натуральных делителей.
+'''
+# https://prnt.sc/Ki8qT_EFL8A7
 
-    for i in range(1, int(n**0.5)+1):
-        if n % i == 0:
-            a.add(i)
-            a.add(n//i)
 
-    return len(a)
+def func(number):
+    dividers = set()
+
+    for i in range(1, int(number ** 0.5) + 1):
+        if number % i == 0:
+            dividers |= {i, number//i}
+
+    return len(dividers)
 
 
-for i in range(700000+1, 10**8):
-    if F(i) < F(i+1) < F(i+2) < F(i+3) < F(i+4):
+for i in range(700000 + 1, 10 ** 8):
+    if func(i) < func(i+1) < func(i+2) < func(i+3) < func(i+4):
         c = i
-        
-        while c < i+5:
-            print(c, F(c))
+        while c < i + 5:
+            print(c, func(c))
             c += 1
         break

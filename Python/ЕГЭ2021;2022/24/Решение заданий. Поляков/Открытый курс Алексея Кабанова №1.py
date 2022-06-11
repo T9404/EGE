@@ -1,40 +1,35 @@
 # Условие: https://prnt.sc/1dl8yk0
 
-# 1) Способ
-f = open('24-zagl.txt')
+
+# (I) Способ
+
+f = open('24.txt')
+string = 'A' + f.readline() + 'A'
 
 
 def func(x):
-    sqr = int(x**0.5)
-    for i in range(2, sqr+1):
+    for i in range(2, int(x**0.5) + 1):
         if x % i == 0:
             return False
 
     return True
 
 
-string = 'A' + f.readline() + 'A'
-mina = float('-inf')
+min_need = float('-inf')
+
 
 for i in range(1, len(string)):
-    if string[i] in '1234567890' and string[i-1] in 'ABC':  # 0
+    if (string[i] in '1234567890') and (string[i-1] in 'ABC'):
         answer = ''
 
-        while string[i] in '1234567890':
+        while (string[i] in '1234567890'):
             answer += string[i]
             i += 1
 
-        if string[i] in 'ABC' and answer[0] != '0':
-            if func(int(answer)):
-                mina = max(mina, int(answer))
+        if ((string[i] in 'ABC') and (answer[0] != '0') and (func(int(answer)))):
+            min_need = max(min_need, int(answer))
 
-print(mina)
-
-
-
-
-
-
+print(min_need)
 
 
 # 2) Способ
@@ -43,19 +38,15 @@ f = open('24.txt')
 s = f.readline()
 
 
-def prime(x):
-    sq = int(x**0.5)
-    for i in range(2, sq+1):
-        if x % i == 0:
-            return False
-
-    return True
-
-
 s = s.replace('A', ' ', 1)
 s = s.replace('B', ' ', 1)
 s = s.replace('C', ' ', 1)
 
+
 a = [int(x) for x in s.split()]
 
-print(max(x for x in a if prime(x)))
+
+answer = max(x for x in a if (
+    all(x % i != 0 for i in range(2, int(x ** 0.5) + 1))))
+    
+print(answer)

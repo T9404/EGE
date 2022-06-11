@@ -1,4 +1,16 @@
 '''
+Простой палиндром – это число, которое читается одинаково слева направо и справа налево, 
+и при этом является простым, то есть не имеет делителей, кроме 1 и самого себя. 
+Примеры простых палиндромов – 101, 131, 151 и т.д. Все простые палиндромы на 
+отрезке [100; 1 000 000 000] распределили по группам с одинаковыми произведениями 
+цифр (если в числе есть цифра 0, она не учитывается в произведении: для числа 16061 
+произведением цифр будет 36). Найдите 5 самых больших по значению чисел в группе с 
+наибольшим количеством элементов. Расположите эти числа в порядке возрастания.
+'''
+# https://prnt.sc/oM3HnnmcBDvw
+
+
+'''
 Можно придумать куда более простое с точки зрения компактности написания кода
 решение, которое будет формировать палиндромы с помощью срезов и itertools.
 Однако, оно будет менее эффективно, а что главное, более тяжелое в понимании.
@@ -14,9 +26,8 @@
 
 from collections import defaultdict
 
+
 # произведение цифр числа
-
-
 def product(n):
     p = 1
     for y in n:
@@ -24,52 +35,58 @@ def product(n):
             p *= int(y)
     return p
 
+
 # проверка на простоту
-
-
 def prime(n):
-    n = int(n)
-    for d in range(2, int(n**0.5) + 1):
-        if n % d == 0:
-            return 0
-    return 1
+    return all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
 
 
-ps = defaultdict(list)  # храним все простые палиндромы
-nechet = '13579'  # наборы цифр для позиций
-digits = '0123456789'  # все цифры
+palindroms = defaultdict(list)  # храним все простые палиндромы
+number_nech = '13579'  # наборы цифр для позиций
+nums = '0123456789'  # все цифры
+
 
 # Формирование палиндромов по логическому паттерну
-for a in nechet:
-    for b in digits:
+for a in number_nech:
+    for b in nums:
         # Например, паттерн трёхзначки = xyx (121, 131, 525, 727 и т.д.)
-        p = a+b+a
+        p = a + b + a
         if prime(p):
-            ps[product(p)] += [int(p)]
-        p = a+b+b+a
+            palindroms[product(p)] += [int(p)]
+
+        p = a + b + b + a
         if prime(p):
-            ps[product(p)] += [int(p)]
-        for c in digits:
-            p = a+b+c+b+a
+            palindroms[product(p)] += [int(p)]
+
+        for c in nums:
+            p = a + b + c + b + a
+
             if prime(p):
-                ps[product(p)] += [int(p)]
-            p = a+b+c+c+b+a
+                palindroms[product(p)] += [int(p)]
+
+            p = a + b + c + c + b + a
             if prime(p):
-                ps[product(p)] += [int(p)]
-            for d in digits:
-                p = a+b+c+d+c+b+a
+                palindroms[product(p)] += [int(p)]
+
+            for d in nums:
+                p = a + b + c + d + c + b + a
                 if prime(p):
-                    ps[product(p)] += [int(p)]
-                p = a+b+c+d+d+c+b+a
+                    palindroms[product(p)] += [int(p)]
+
+                p = a + b + c + d + d + c + b + a
                 if prime(p):
-                    ps[product(p)] += [int(p)]
-                for e in digits:
-                    p = a+b+c+d+e+d+c+b+a
+                    palindroms[product(p)] += [int(p)]
+
+                for e in nums:
+                    p = a + b + c + d + e + d + c + b + a
+
                     if prime(p):
-                        ps[product(p)] += [int(p)]
-                    p = a+b+c+d+e+e+d+c+b+a
+                        palindroms[product(p)] += [int(p)]
+                    p = a + b + c + d + e + e + d + c + b + a
+
                     if prime(p):
-                        ps[product(p)] += [int(p)]
+                        palindroms[product(p)] += [int(p)]
+
 
 # Выводим результирующую группу
-print(*((sorted(max(ps.values(), key=len))[::-1])[:5])[::-1], sep='\n')
+print(*((sorted(max(palindroms.values(), key=len))[::-1])[:5])[::-1], sep='\n')

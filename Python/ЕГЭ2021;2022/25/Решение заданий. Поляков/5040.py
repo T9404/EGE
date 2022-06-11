@@ -1,34 +1,47 @@
+'''
+Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:
+- символ «?» означает ровно одну произвольную цифру;
+- символ «*» означает любую последовательность цифр произвольной длины; в том числе «*» может 
+задавать и пустую последовательность.
+Среди натуральных чисел, не превышающих 109, найдите все числа, соответствующие маске 3?458*3, 
+у которых в девятеричной записи цифры идут в порядке невозрастания. В ответе запишите в первом 
+столбце таблицы все найденные числа в порядке возрастания, а во втором столбце — суммы цифр их 
+девятеричной записи.
+'''
+# https://prnt.sc/mHMrbTBMDPqs
+
+
 from itertools import product
 
 
-def f_9(x):
-    x_9 = []
+def numb_system_9(num):
+    numb_9 = []
 
-    while x:
-        x_9.append(x % 9)
-        x //= 9
+    while num:
+        numb_9.append(num % 9)
+        num //= 9
 
-    return ''.join(map(str, x_9[::-1]))
+    return (''.join(map(str, numb_9[::-1])))
 
 
-def sys_numb(x):
-    x_9 = f_9(x)
+def sys_numb(num):
+    numb_9 = numb_system_9(num)
 
-    for i in range(len(x_9)-1):
-        if x_9[i] < x_9[i+1]:
+    for i in range(len(numb_9) - 1):
+        if numb_9[i] < numb_9[i+1]:
             return False
 
-    return x, sum(map(int, x_9))
+    return num, sum(map(int, numb_9))
 
 
-a = set()
+parts = set()
 
 
 for i, j, m, n in product('0123456789 ', repeat=4):
-    x = int(('3' + i + '458' + j + m + n + '3').replace(' ', ''))
-    if x <= 10**9 and sys_numb(x):
-        a.add(sys_numb(x))
+    num = int(('3' + i + '458' + j + m + n + '3').replace(' ', ''))
+    if num <= 10**9 and sys_numb(num):
+        parts.add(sys_numb(num))
 
 
-for i in sorted(a, key=lambda d: d[0]):
+for i in sorted(parts, key=lambda d: d[0]):
     print(*i)

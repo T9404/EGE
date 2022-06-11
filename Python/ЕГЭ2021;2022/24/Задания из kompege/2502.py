@@ -1,18 +1,29 @@
-f = open('242.txt')
+'''
+Текстовый файл состоит не более чем из 106 заглавных латинских букв (A..Z). 
+Текст разбит на строки различной длины. Определите количество строк, в которых хотя 
+бы раз встречается комбинация K*GE, где звёздочка означает произвольный символ.
+'''
+# https://prnt.sc/UO_CyrqZiEbr
+
+
+f = open('24.txt')
 s = f.readlines()
 
 
-def check_str(w):
-    for i in range(1, len(w)-2):
-        if w[i-1] == 'K' and w[i+1:i+3] == 'GE':
+def check_str(strin):
+    for i in range(1, len(w) - 2):
+        if (strin[i-1] == 'K') and (strin[i+1:i+3] == 'GE'):
             return True
+
     return False
 
 
-k = 0
+count = 0
+
 
 for w in s:
     if check_str(w):
-        k += 1
+        count += 1
 
-print(k)
+
+print(count)

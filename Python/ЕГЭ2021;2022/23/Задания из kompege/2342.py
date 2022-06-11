@@ -1,14 +1,26 @@
-def f(s, e):
-    if s > e:
+'''
+У исполнителя Калькулятор две команды, которым присвоены номера:
+
+1. прибавь 1
+2. увеличь каждый разряд числа на 1
+
+Например, число 23 с помощью команды 2 превратится в 34, а 29 в 39 (так как младший разряд нельзя увеличить). 
+Если перед выполнением команды 2 какая-либо цифра равна 9, она не изменяется. Сколько есть программ, 
+которые число 25 преобразуют в число 51?
+'''
+# https://prnt.sc/LupYexxVVg0N
+
+
+def func(start, end):
+    if (start > end):
         return 0
-    elif s == e:
+    elif (start == end):
         return 1
     else:
-        
-        if s % 10 == 9: 
-            return f(s+1, e)+f(s+10, e)
+        if (start % 10 == 9):
+            return func(start + 1, end) + func(start + 10, end)
         else:
-            return f(s+1, e)+f(s+10+1, e)
+            return func(start + 1, end) + func(start + 10 + 1, end)
 
 
-print(f(25, 51))
+print(func(25, 51))
