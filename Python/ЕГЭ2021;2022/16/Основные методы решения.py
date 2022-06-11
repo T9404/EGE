@@ -1,5 +1,5 @@
 '''
-Рекурсия - это фундамент, через который стоит пройти. Тем более все очень просто
+Рекурсия - это фундамент, через который стоит пройти обязательно! 
 
 Что посмотреть?
 https://youtu.be/NOaSY5pJmyc
@@ -20,14 +20,17 @@ F(n) = 2·F(n–1) – n + 1, если n > 1
 Чему равно значение функции F(21)?
 '''
 
+
 def f(n):
     if n == 1:
         return 3
     elif n > 1:
-        return 2 * f(n-1) - n + 1
+        return 2 * f(n - 1) - n + 1
 
 
 print(f(21))
+
+
 
 
 
@@ -53,23 +56,23 @@ F(n) = F(n-1) + 2*n + 3, при нечётных n > 15
 
 def func(n):
     if n <= 15:
-        return n*n+11
+        return n * n + 11
     elif n > 15 and n % 2 == 0:
-        return func(n//2) + n**3 - 5*n
+        return func(n // 2) + n ** 3 - 5 * n
     elif n > 15 and n % 2 != 0:
-        return func(n-1) + 2 * n + 3
+        return func(n - 1) + 2 * n + 3
 
 
 count = 0
+
 
 for x in range(1, 1000+1):
     number = func(x)
     if str(number).count('6') >= 3: 
         count += 1
 
+
 print(count)  
-
-
 
 
 
@@ -90,6 +93,7 @@ print('>>>>>>>')
 https://prnt.sc/1ar02t6
 
 '''
+
 
 def F(N):
     global amount
@@ -115,7 +119,7 @@ print(amount)
 
 
 
-print('>>>>>')  # переделай
+print('>>>>>')  
 # 4189 К.Ю.Поляков
 '''
 Алгоритм вычисления значения функции F(n), где n – целое неотрицательное число,
@@ -129,16 +133,16 @@ F(n) = 3,3*F(n–2), при n ≥ 95
 Какая цифра встречается чаще всего в целой части значения функции F(33)? 
 '''
 
+
 def vol(n):
     if n == 0:
         return 2
     elif 0 < n <= 15:
-        return vol(n-1)
+        return vol(n - 1)
     elif 15 < n < 95:
-        return 1.6 * vol(n-3)
+        return 1.6 * vol(n - 3)
     elif n >= 95:
-        return 3.3*vol(n-2)
+        return 3.3*vol(n - 2)
 
 
-print(int(vol(33)))  # ответ 3
-
+print(int(vol(33)))  

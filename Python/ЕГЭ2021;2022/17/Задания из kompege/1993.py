@@ -1,18 +1,28 @@
+'''
+В файле содержится последовательность целых чисел. Элементы последовательности 
+могут принимать целые значения от –10 000 до 10 000 включительно. Определите и 
+запишите в ответе сначала количество пар элементов последовательности, 
+сумма которых кратна 3 и не кратна 6, а произведение оканчивается на 8, 
+затем максимальную из сумм элементов таких пар. В данной задаче под парой 
+подразумевается два идущих подряд элемента последовательности.
+'''
+# https://prnt.sc/L6cqVNsMRUWS
+
+
 f = open('17.txt')
+arr = [int(x) for x in f.readlines()]
 
 
-a = [int(x) for x in f.readlines()]
-k, mak = 0, float('-inf')
+count, max_sum = 0, float('-inf')
 
 
-for i in range(len(a)-1):
-    sum = abs(a[i]+a[i+1])
-    mult = abs(a[i]*a[i+1])
+for i in range(len(arr)-1):
+    sum = abs(arr[i] + arr[i+1])
+    mult = abs(arr[i] * arr[i+1])
 
-    if sum % 3 == 0 and sum % 6 != 0:
-        if mult % 10 == 8:
-            k += 1
-            mak = max(a[i]+a[i+1], mak)
+    if (sum % 3 == 0) and (sum % 6 != 0) and (mult % 10 == 8):
+        count += 1
+        max_sum = max(arr[i]+arr[i + 1], max_sum)
 
 
-print(k, mak)
+print(count, max_sum)

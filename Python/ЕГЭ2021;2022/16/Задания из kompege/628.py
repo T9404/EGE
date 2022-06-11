@@ -1,11 +1,26 @@
+'''
+Алгоритм вычисления функции F(n) задан следующими соотношениями:
+
+F(n) = n + 3, при n ≤ 18
+
+F(n) = (n // 3) · F(n // 3) + n – 12, при n > 18, кратных 3
+
+F(n) = F(n–1) + n · n + 5, при n > 18, не кратных 3
+
+Здесь «//» обозначает деление нацело. Определите количество натуральных значений 
+n из отрезка [1; 1000], для которых все цифры значения F(n) чётные.
+'''
+# https://prnt.sc/hdR2r2sF-Dgd
+
+
 def f(n):
     if n <= 18:
-        return (n+3)
+        return (n + 3)
     elif (n % 3 == 0) and (n > 18):
-        return (n//3)*f(n//3) + n - 12
+        return (n // 3) * f(n // 3) + n - 12
     else:
-        return f(n-1)+n*n+5
+        return f(n - 1) + n * n + 5
 
 
-d = [i for i in range(1, 1000+1) if all(int(x) % 2 == 0 for x in str(f(i)))]
-print(len(d))
+arr = [i for i in range(1, 1000+1) if all(int(x) % 2 == 0 for x in str(f(i)))]
+print(len(arr))

@@ -10,6 +10,7 @@ or  ----> v
 
 
 
+
 print('>>>>>')
 # К.Ю.Поляков 3602
 '''
@@ -22,7 +23,7 @@ print('>>>>>')
 
 
 def f(x, y, a):
-    return ((x - 2*y) < 3*a) or (2 * y > x) or (3 * x > 50)
+    return ((x - 2 * y) < 3 * a) or (2 * y > x) or (3 * x > 50)
 
 
 for a in range(1, 100):
@@ -63,7 +64,7 @@ for A in range(10000, 0, -1):
     cool = True
 
     for x, y in product(range(1000), range(1000)):
-        if (((x**2 - 11*x+28) > 0) or ((y**2-9*y+14) > 0) or ((x**2+y**2) > A)) == 0:
+        if not (((x ** 2 - 11 * x + 28) > 0) or ((y ** 2 - 9 * y + 14) > 0) or ((x ** 2 + y ** 2) > A)):
             cool = False
             break
 

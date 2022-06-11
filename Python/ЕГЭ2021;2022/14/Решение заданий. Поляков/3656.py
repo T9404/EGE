@@ -1,18 +1,26 @@
-def f(x, s):
-    m, x_s = 0, ''
+'''
+Число 456 записали в системах счисления с основаниями от 2 до 10 включительно. 
+При каком основании количество нечётных цифр в записи этого числа будет максимальным? 
+Если таких оснований несколько, то укажите максимальное из них.
+'''
+# https://prnt.sc/DN-zV0gzidjt
 
-    while x:
-        x_s += str(x % s)
-        x = x // s
 
-    x_s = x_s[::-1]
+def func(number, foundation):
+    count, number_s = 0, ''
 
-    for i in x_s:
+    while number:
+        number_s += str(number % foundation)
+        number //= foundation
+
+    number_s = number_s[::-1]
+
+    for i in number_s:
         if int(i) % 2 != 0:
-            m += 1
+            count += 1
 
-    return m
+    return count
 
 
-d = [f(456, j) for j in range(2, 10+1)][::-1]
-print(10 - d.index(max(d)))
+array = [func(456, j) for j in range(2, 10+1)][::-1]
+print(10 - array.index(max(array)))

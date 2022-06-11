@@ -1,22 +1,35 @@
-p = set(range(2, 21, 2))
-q = set(range(3, 31, 3))
-r = set(range(12, 61, 12))
+'''
+Элементами множеств А, P, Q, R являются натуральные числа, причём 
+P = {2,4,6,8,10,12,14,16,18,20}, Q = {3,6,9,12,15,18,21,24,27,30}, 
+R = {12,24,36,48,60}. Известно, что выражение
+
+(x ∉ A) → (((x ∈ P) ∧ (x ∈ Q)) → (x ∈ R)) истинно 
+(т.е. принимает значение 1 при любом значении переменной х. 
+Определите наименьшее возможное произведение элементов в множестве A.
+'''
+# https://prnt.sc/UIC6Q_hXkTsY
+
+
+P = set(range(2, 21, 2))
+Q = set(range(3, 31, 3))
+R = set(range(12, 61, 12))
 
 
 def f(x, a):
-    return (x not in a) <= (((x in p) and (x in q)) <= (x in r))
+    return (x not in a) <= (((x in P) and (x in Q)) <= (x in R))
 
 
 a = []
+
 
 for x in range(1, 1000):
     if not f(x, a):
         a.append(x)
 
 
-z = 1
+answer = 1
 
 for i in range(len(a)):
-    z *= a[i]
+    answer *= a[i]
 
-print(z)
+print(answer)

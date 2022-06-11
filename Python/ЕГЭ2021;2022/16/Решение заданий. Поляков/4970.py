@@ -1,33 +1,45 @@
-# 1) Способ
+'''
+Алгоритм вычисления значения функции F(n), где n – целое неотрицательное число, 
+задан следующими соотношениями:
+F(0) = 8
+F(n) = 5 + F(n / 3) если n > 0 и n делится на 3
+F(n) = F(n // 3) в остальных случаях
+Здесь // означает деление нацело. Определите количество значений n 
+на отрезке [1, 100 000 000], для которых F(n) = 18.
+'''
+# https://prnt.sc/aUk26Bt-TwEu
+
+
+# (I) Способ
 
 from itertools import product
 
 
-def f3(x):
-    x_3 = ''
+def system_3(number):
+    number_3 = ''
 
-    while x:
-        x_3 += str(x % 3)
-        x //= 3
+    while number:
+        number_3 += str(number % 3)
+        number //= 3
 
-    return int(x_3[::-1])
+    return int(number_3[::-1])
 
 
-k, mak = 0, f3(100_000_000)  # по условию: на отрезке [1, 100 000 000]
+answer, mak = 0, system_3(100_000_000)  # по условию: на отрезке [1, 100 000 000]
 
 
 for r in range(1, 18):
     for i in product('012', repeat=r):
-        w = ''.join(i)
+        num = ''.join(i)
 
-        if int(w) > mak:
+        if int(num) > mak:
             break
 
-        if w[0] != '0' and (w.count('0') == 2):
-            k += 1
+        if (num[0] != '0') and (num.count('0') == 2):
+            answer += 1
 
 
-print(k)
+print(answer)
 
 
 '''
@@ -40,15 +52,19 @@ print(k)
 
 
 
-# 2) Способ
+
+# (II) Способ
+
 
 road = [0] * 100_000_000
 road[0] = 8
 
+
 for i in range(1, 100_000_000):
-    if i % 3 == 0:
+    if (i % 3 == 0):
         road[i] = 5 + road[i // 3]
     else:
         road[i] = road[i // 3]
+
 
 print(road.count(18))

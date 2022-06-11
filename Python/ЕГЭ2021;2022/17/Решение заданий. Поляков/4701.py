@@ -1,27 +1,39 @@
+'''
+В файле 17-243.txt содержится последовательность целых чисел. Элементы последовательности 
+могут принимать целые значения от 0 до 10 000 включительно. Определите количество пар чисел, 
+в которых хотя бы один из двух элементов больше, чем наибольшее из всех чисел в файле, 
+делящихся на 107, и в семеричной записи хотя бы одного элемента из двух содержится сочетание 
+цифр 36. В ответе запишите два числа: сначала количество найденных пар, а затем – минимальную 
+сумму элементов таких пар. В данной задаче под парой подразумевается два идущих подряд элемента 
+последовательности.
+'''
+# https://prnt.sc/6MQiXBTC7DCP
+
+
 f = open('17-243.txt')
+arr = [int(x) for x in f.readlines()]
 
-a = [int(x) for x in f.readlines()]
 
-
-def f7(x):  # 2 условие
+def number_found(x):
     x_7 = ''
-    
+
     while x:
         x_7 += str(x % 7)
         x //= 7
-    x_7 = x_7[::-1]
-    
-    return ('36' in x_7)
+
+    return ('36' in x_7[::-1])
 
 
-m17 = max(i for i in a if i % 107 == 0)  # 1 условие
-k, m =  0, float('inf')
+max_17 = max(i for i in arr if i % 107 == 0)
+count, min_sum = 0, float('inf')
 
-for i in range(1, len(a)):
-    if max(a[i-1], a[i]) > m17:
-        bools = [f7(a[i-1]), f7(a[i])]
+
+for i in range(1, len(arr)):
+    if max(arr[i-1], arr[i]) > max_17:
+        bools = [number_found(arr[i-1]), number_found(arr[i])]
         if (True in bools):
-            k += 1
-            m = min(m, a[i]+a[i-1])
+            count += 1
+            min_sum = min(min_sum, arr[i] + arr[i-1])
 
-print(k, m)
+
+print(count, min_sum)

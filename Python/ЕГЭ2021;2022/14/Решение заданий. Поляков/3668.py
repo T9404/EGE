@@ -1,20 +1,30 @@
-from itertools import product
+'''
+Число 1988 записали в системах счисления с основаниями от 2 до 10 включительно. 
+При каких основаниях в записи этого числа нет двух одинаковых цифр, стоящих рядом? 
+В ответе укажите сумму всех подходящих оснований.
+'''
+# https://prnt.sc/CefJntKJKU5E
 
 
-def f(x, n):
-    x_n = ''
-    while x:
-        x_n += str(x % n)
-        x //= n
-    d = [(str(i)+str(i)) for i in range(n)]
+def f(number, foundation):
+    number_found = ''
+
+    while number:
+        number_found += str(number % foundation)
+        number //= foundation
+
+    d = [str(i) * 2 for i in range(foundation)]
     for i in d:
-        if i in x_n:
+        if i in number_found:
             return False
+
     return True
 
 
-k = 0
+count = 0
+
 for i in range(2, 10+1):
     if f(1988, i):
-        k += i
-print(k)
+        count += i
+
+print(count)

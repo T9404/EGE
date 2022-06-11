@@ -1,22 +1,28 @@
+'''
+В файле 17-3.txt содержится последовательность целых чисел. Элементы последовательности 
+могут принимать целые значения от -10 000 до 10 000 включительно. Определите и запишите 
+в ответе сначала количество четвёрок элементов последовательности, в которых чётность 
+соседних чисел различна, затем максимальную сумму среди таких четвёрок. В данной задаче 
+под четвёркой подразумевается четыре идущих подряд элемента последовательности.
+'''
+# https://prnt.sc/ioVTLAGdDdSf
+
+
 f = open('17.txt')
+arr = [int(x) for x in f.readlines()]
 
 
-d = [int(x) for x in f.readlines()]
+count, min_sum = 0, 0
 
 
-k, mik = 0, 0
-
-
-for i in range(1, len(d)-2):  # с 0, 1 и 2, 3го элементов начало
+for i in range(1, len(arr)-2): 
+    a, b, c, e = int(arr[i-1]),  int(arr[i]), int(arr[i+1]), int(arr[i+2])  
     
-    # a, b, c, e будут с теми же знаками
-    a, b, c, e = int(d[i-1]),  int(d[i]), int(d[i+1]), int(d[i+2])  
-    
-    if (abs(a) % 2 != abs(b) % 2):
-        if (abs(b) % 2 != (abs(c) % 2)):
-            if (abs(c) % 2 != abs(e) % 2):
-                mik = max(a+b+c+e, mik)
-                k += 1
+    if ((abs(a) % 2 != abs(b) % 2) and 
+            (abs(b) % 2 != abs(c) % 2)  and 
+                (abs(c) % 2 != abs(e) % 2)):
+        min_sum = max(a + b + c + e, min_sum)
+        count += 1
 
 
-print(k, mik)
+print(count, min_sum)
