@@ -1,33 +1,45 @@
-f = open('26-56.txt')
+'''
+Администратор написал скрипт для раскладки N архивов на K дисков, каждый объемом V. 
+Алгоритм скрипта обрабатывает файлы в порядке убывания их размера. Если файл помещается 
+на диск, то следующий по размеру файл стараются поместить на следующий диск. Если не 
+помещается, то на следующий, и так по кругу. Если файл не поместился ни на один диск, 
+то он откладывается в локальную папку. Укажите в ответе два числа: объем всех отложенных 
+файлов и их количество.
+'''
+# https://prnt.sc/LJeDRHdfN6AH
+
+
+f = open('26.txt')
 v, k, n = map(int, f.readline().split())
 
 
-a = [int(x) for x in f]
-a.sort(reverse=True)
+numbers = [int(x) for x in f]
+numbers.sort(reverse=True)
 
 
-disk = [0]*k
-otl = []
+disk = [0] * k
+need_num = []
 
-p = ''
+
+arr = ''
 for i in range(k):
-    p += str(i)
+    arr += str(i)
 
 
-for x in a:
-    c = 0
+for x in numbers:
+    count = 0
 
-    for i in p:
+    for i in arr:
         i = int(i)
-        c += 1
+        count += 1
 
-        if (disk[i]+x) <= v:
+        if (disk[i] + x) <= v:
             disk[i] += x
-            p = p[1:len(p)]+p[0]
+            arr = arr[1:len(arr)] + arr[0]
             break
 
-        elif c == k:
-            otl.append(x)
+        elif count == k:
+            need_num.append(x)
 
 
-print(sum(otl), len(otl))
+print(sum(need_num), len(need_num))

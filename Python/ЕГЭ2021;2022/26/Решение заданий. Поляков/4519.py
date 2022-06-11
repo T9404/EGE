@@ -1,70 +1,80 @@
+''' 
+Вся логика- взяли товары в сумку, которые можем. Поменяли самые дорогие на самые дешевые, 
+не вошедшие в сумку, посчитали 
+'''
+# https://prnt.sc/HupPcEYlW1Os
+
+
 f = open('26-64.txt')
 n, s = map(int, f.readline().split())
-''' Вся логика- взяли товары в сумку, которые можем. Поменяли самые дорогие на самые дешевые, не вошедшие в сумку, посчитали '''
 
 
-
-def read(n):  # чтение данных
-    d = []
+def read(n):  
+    arr = []
 
     for _ in range(n):
         a, b = f.readline().split()
         a = int(a)
-        d.append([a, b])  # считывание числа и буквы в массив
+        # считывание числа и буквы в массив
+        arr.append([a, b])  
     
     # сортировка по возрастанию (по числу-первому элементу)
-    d.sort(key=lambda x: x[0])
+    arr.sort(key=lambda x: x[0])
 
-    return d
+    return arr
 
 
-
-def bug_money(d):  # добавляем в нашу сумку максимум товаров, пока у нас есть $
+# добавляем в нашу сумку максимум товаров, пока у нас есть $
+def bug_money(arr):  
     global s
-    prom = []
+    cost = []
 
-    for m in d:
+    for m in arr:
         if s - m[0] >= 0:
             s -= m[0]
-            prom.append(m)
+            cost.append(m)
 
-    return prom.sort(key=lambda x: x[0], reverse=True)
+    return cost.sort(key=lambda x: x[0], reverse=True)
 
 
-
-def find_b(d):  # найти 'B'
+# найти 'B'
+def find_b(arr):  
     j = 0
+
     while True:
-        if d[j][1] == 'B':
-            number, word = d[j]
-            del(d[j])  # выбрасываем использованное
+        if arr[j][1] == 'B':
+            number, word = arr[j]
+            # выбрасываем использованное
+            del(arr[j])  
             return number, word
         else:
             j += 1
 
 
-
-def permutations(prom, d):  # переставляем элементы так, чтобы кол-во 'B' было наибольшим
+# переставляем элементы так, чтобы кол-во 'B' было наибольшим
+def permutations(cost, arr):
     global s
     i = 0
 
     while True:
         try:
-            if prom[i][1] != 'B':
-                num, wor = find_b(d)
-                if s - num + prom[i][0] >= 0:
-                    s = s - num + prom[i][0]
-                    prom[i] = num, wor
+            if cost[i][1] != 'B':
+                num, wor = find_b(arr)
+                if s - num + cost[i][0] >= 0:
+                    s = s - num + cost[i][0]
+                    cost[i] = num, wor
             i += 1
         except:
             break
-    return prom
+
+    return cost
 
 
-def count_B(new_prom):  # счётчик для ответа
+# счётчик для ответа
+def count_B(new_cost):
     k = 0
 
-    for m in new_prom:
+    for m in new_cost:
         if m[1] == 'B':
             k += 1
 
@@ -72,10 +82,20 @@ def count_B(new_prom):  # счётчик для ответа
 
 
 
-d = read(n)  # запись в массив
-prom = bug_money(d)  # добавление любых элементов пока не кончились $
-d = d[len(prom):]  # зачем нам одинаковые элементы?
-new_prom = permutations(prom, d)  # добавление в нашу сумку макс кол-во 'B'
-k = count_B(new_prom)  # подсчёт 'B'
+# запись в массив
+arr = read(n)  
+
+# добавление любых элементов пока не кончились $
+cost = bug_money(arr) 
+
+# зачем нам одинаковые элементы? 
+arr = arr[len(cost):]  
+
+# добавление в нашу сумку макс кол-во 'B'
+new_cost = permutations(cost, arr)  
+
+# подсчёт 'B'
+k = count_B(new_cost)  
+
 
 print(k, s)

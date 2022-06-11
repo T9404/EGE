@@ -1,10 +1,19 @@
-f = open('data/26-k1.txt')
+'''
+В магазине электроники раз в месяц проводится распродажа. Из всех товаров выбирают K товаров 
+с самой большой ценой и делают на них скидку в 20%. По заданной информации о цене каждого из 
+товаров и количестве товаров, на которые будет скидка, определите цену самого дорогого товара, 
+не участвующего в распродаже, а также целую часть от суммы всех скидок.
+'''
+# https://prnt.sc/gH9LfOQyNObj
+
+
+f = open('26.txt')
 n, k = map(int, f.readline().split())
 
 
-dt = sorted([int(f.readline()) for _ in range(n)])
+nums = sorted([int(f.readline()) for _ in range(n)])
 
-sale = [x*0.2 for x in dt[-k:]]
+sale = [x * 0.2 for x in nums[-k:]]
 
 
-print(dt[len(dt)-1-k-1], int(sum(sale)))
+print(nums[len(nums) - 1 - k - 1], int(sum(sale)))

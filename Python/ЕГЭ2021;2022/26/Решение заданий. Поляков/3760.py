@@ -1,22 +1,39 @@
-f = open('C:\\Users\\XiaoMai\\Downloads\\26-44.txt')
+'''
+В магазине проводят акция – каждый второй товар со скидкой 50%. При этом в акции участвуют 
+только те товары, цены которых попадают в одну ценовую категорию. Каждая ценовая категория 
+включает 500 целых значений: 1-500, 501-1000, 1001-1501 и т.д. Например, при наличии в чеке 
+только позиций с ценами 300 и 1000 предложение акции не работает. Необходимо распределить 
+товары в чеке таким образом, чтобы итоговая цена всех товаров была максимально выгодной для 
+магазина. В качестве ответа вывести полученную сумму скидки для всего чека и конечную стоимость 
+самого дорогого проданного по акции товара. В случае получения нецелых значений привести только 
+целые части найденных чисел.
+'''
+# https://prnt.sc/H4SqB45c-HnD
+
+
+from random import sample
+
+
+f = open('26.txt')
 n = int(f.readline())
 
 
-a = sorted([int(f.readline()) for _ in range(n)])
+numbers = sorted([int(f.readline()) for _ in range(n)])
 
 
-su, max_t = 0, 0
+sale, maximum_cost = 0, 0
+num_pos_min, num_pos_max = 1, 500
 
-mi, ma = 1, 500
 
-while (ma <= max(a)+1000):
-    k = [x for x in a if (mi <= x <= ma)]
+while (num_pos_max <= max(numbers) + 1000):
+    arr = [x for x in numbers if (num_pos_min <= x <= num_pos_max)]
 
-    if (len(k) > 1):
-        su += 0.5*(sum(k[0:len(k)//2]))
-        max_t = max(max_t, k[len(k)//2-1]*0.5)
+    if (len(arr) > 1):
+        sale += 0.5*(sum(arr[0:len(arr)//2]))
+        maximum_cost = max(maximum_cost, arr[len(arr)//2-1]*0.5)
 
-    mi += 500
-    ma += 500
+    num_pos_min += 500
+    num_pos_max += 500
 
-print(int(su), int(max_t))
+
+print(int(sale), int(maximum_cost))

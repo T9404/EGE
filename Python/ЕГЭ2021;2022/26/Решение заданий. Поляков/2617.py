@@ -1,29 +1,41 @@
-f = open('data/26.txt')
+'''
+Системный администратор раз в неделю создаёт архив пользовательских файлов. Однако объём диска, 
+куда он помещает архив, может быть меньше, чем суммарный объём архивируемых файлов. Известно, 
+какой объём занимает файл каждого пользователя. По заданной информации об объёме файлов пользователей 
+и свободном объёме на архивном диске определите максимальное число пользователей, чьи файлы можно 
+сохранить в архиве, а также максимальный размер имеющегося файла, который может быть сохранён в архиве, 
+при условии, что сохранены файлы максимально возможного числа пользователей.
+'''
+# https://prnt.sc/09fJ2pIng5PO
+
+
+f = open('26.txt')
 s, n = map(int, f.readline().split())
 
 
-dt = [int(f.readline()) for _ in range(n)]
-dt.sort()
-
+numbers = sorted([int(f.readline()) for _ in range(n)])
 
 cand = []
 
-scur, i = 0, 0
+num, i = 0, 0
 
-while scur < s:
-    if scur+dt[i] <= s:
-        scur += dt[i]
+
+while num < s:
+    if num + numbers[i] <= s:
+        num += numbers[i]
         i += 1
-        cand.append(dt[i])
+        cand.append(numbers[i])
     else:
         break
 
 
 count = i
-file = s-scur+dt[i]
+file = s - num + numbers[i]
 
-for j in range(i+1, len(dt)):
-    if file >= dt[j]:
-        cand.append(dt[j])
+
+for j in range(i + 1, len(numbers)):
+    if file >= numbers[j]:
+        cand.append(numbers[j])
+
 
 print(count, max(cand))

@@ -1,69 +1,79 @@
-# 1) Способ
+'''
+На сайте министерства транспорта организовали приём жалоб автомобилистов на плохое качество дорог. 
+К моменту, когда министерство выделило средства на ремонт одной из автомагистралей, на сайте 
+накопилось уже некоторое количество жалоб. Каждая жалоба описывает начало и конец проблемного 
+участка (примерное расстояние от начала автомагистрали в метрах). Так как жалобы писались независимо 
+друг от друга разными людьми, некоторые описываемые участки автомагистрали накладываются друг на друга. 
+Для планирования необходимых ремонтных ресурсов министерство решило узнать, сколько заявлено непрерывных 
+участков дороги и какова их общая длина.
+'''
+# https://prnt.sc/P2v_13l1IhSq
+
+
+# (I) Способ
 
 f = open('2480.txt')
 n = int(f.readline())
 
 
-road = [0]*2_000_001  # из условия меньше 2_000_000
+# из условия меньше 2_000_000
+road = [0]*2_000_001
 
-for i in range(n):
-    a, b = map(int, f.readline().split())
-    road[a] += 1
+
+for _ in range(n):
+    road, b = map(int, f.readline().split())
+    road[road] += 1
     road[b] -= 1
 
 
 k = road[0]
-update = []  # дорога с жалобами
+# дорога с жалобами
+alert = []
 
 for i in range(1, len(road)):
-    update.append(k)
+    alert.append(k)
     k += road[i]
 
 
 count_road, len_roads = 0, 0
 
-for i in range(1, len(update)):
-    if update[i-1] == 0 and update[i] > 0:
+
+for i in range(1, len(alert)):
+    if alert[i-1] == 0 and alert[i] > 0:
         start = i
 
-    if update[i-1] > 0 and update[i] == 0:
+    if alert[i-1] > 0 and alert[i] == 0:
         count_road += 1
         len_roads += (i - start)
+
 
 print(count_road, len_roads)
 
 
 
 
+# (II) Способ
 
-
-
-
-
-
-# 2) Способ
-
-f = open('C:\\Users\\XiaoMai\\Downloads\\26 (43).txt')
+f = open('26.txt')
 n = int(f.readline())
 
 
-a = [0]*2_000_000
+road = [0] * 2_000_000
 
 
 for _ in range(n):
-    st, end = map(int, f.readline().split())
-    for i in range(st, end):
-        a[i] = 1
+    start, end = map(int, f.readline().split())
+    for i in range(start, end):
+        road[i] = 1
 
 
-s = ''
-
-for i in a:
-    s += str(i)
-
-
-s = s.replace('0', ' ', s.count('0')).split()
+line = ''
+for i in road:
+    line += str(i)
 
 
-p = [len(x) for x in s]
+line = line.replace('0', ' ', line.count('0')).split()
+
+
+p = [len(x) for x in line]
 print(len(p), sum(p))
