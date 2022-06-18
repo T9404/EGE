@@ -114,7 +114,7 @@ print(data[-1])
 # 11 Питонический цикл
 
 data = [20, 500, 62, 174]
-for i, value in enumerate(data, 1): # мы можем указать начальный индекс (1)
+for i, value in enumerate(data, start=1): # мы можем указать начальный индекс (1)
     print(i, value)
 
 
