@@ -60,6 +60,8 @@
 
 ### 🕮 Прочитать что-нибудь интересное:
 
+* https://telegra.ph/Kak-Lena-EGEH-sdavala-v-2022-godu-07-05 
+
 * https://habr.com/ru/post/421583/
 
 ---
